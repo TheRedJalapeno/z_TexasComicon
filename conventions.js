@@ -21,23 +21,36 @@ document.addEventListener('DOMContentLoaded', function () {
     let selectedCities = new Set();
     let selectedMonths = new Set();
 
+    const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     function populateFilters(data) {
         const categories = new Set();
-        const keywords = new Set();
+        const keywordFrequency = {};
         const cities = new Set();
         const months = new Set();
 
         data.forEach(item => {
             categories.add(item.category);
-            item.keywords.forEach(keyword => keywords.add(keyword));
+            item.keywords.forEach(keyword => {
+                if (keywordFrequency[keyword]) {
+                    keywordFrequency[keyword]++;
+                } else {
+                    keywordFrequency[keyword] = 1;
+                }
+            });
             cities.add(item.city);
             months.add(item.month);
         });
 
         addSelectors(Array.from(categories).sort(), categoryContainer, selectedCategories);
-        addSelectors(Array.from(keywords).sort(), keywordContainer, selectedKeywords);
+
+        const sortedKeywords = Object.keys(keywordFrequency).sort((a, b) => keywordFrequency[b] - keywordFrequency[a]);
+        addSelectors(sortedKeywords, keywordContainer, selectedKeywords);
+
         addSelectors(Array.from(cities).sort(), cityContainer, selectedCities);
-        addSelectors(Array.from(months), monthContainer, selectedMonths);
+
+        const sortedMonths = monthOrder.filter(month => months.has(month));
+        addSelectors(sortedMonths, monthContainer, selectedMonths);
     }
 
     function addSelectors(items, container, selectedSet) {
@@ -81,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 <em>${item.category}</em>
                 <h2>${item.name}</h2>
                 <h3>${item.city}, ${item.zip_code}</h3>
-                <h3>Usually in ${item.month}</h3>
                 <p>${item.description}</p>
                 <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
                 <span>
