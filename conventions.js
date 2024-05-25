@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const cityContainer = document.getElementById('cityContainer');
     const monthContainer = document.getElementById('monthContainer');
     const contentContainer = document.getElementById('content');
+    const resultCountElement = document.getElementById('resultCount');
+    const noResultsMessage = document.getElementById('noResultsMessage');
 
     let selectedCategories = new Set();
     let selectedKeywords = new Set();
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return categoryMatch && keywordMatch && cityMatch && monthMatch;
         });
         populateEvents(filteredData);
+        updateResultCount(filteredData.length);
     }
 
     function populateEvents(data) {
@@ -110,5 +113,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             contentContainer.appendChild(box);
         });
+    }
+
+    function updateResultCount(count) {
+        resultCountElement.textContent = `Results: ${count}`;
+        if (count === 0) {
+            noResultsMessage.style.display = 'block';
+        } else {
+            noResultsMessage.style.display = 'none';
+        }
     }
 });

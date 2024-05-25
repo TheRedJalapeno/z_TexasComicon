@@ -473,5 +473,214 @@
       "tiktok": "https://www.tiktok.com/@AggieCon",
       "reddit": "https://www.reddit.com/r/AggieCon"
     }
-  }
+  },
+  {
+    "uid": 26,
+    "name": "Central Texas Comic Con",
+    "month": "April",
+    "city": "Waco",
+    "zip_code": "76710",
+    "description": "Features comics, cosplay, and pop culture vendors.",
+    "keywords": ["comics", "cosplay", "pop culture"],
+    "category": "Comicon",
+    "website": "https://www.centraltexascomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/CentralTexasComicCon",
+      "twitter": "https://twitter.com/CentralTXComic",
+      "instagram": "https://www.instagram.com/CentralTexasComicCon",
+      "threads": "https://www.threads.net/CentralTexasComicCon",
+      "tiktok": "https://www.tiktok.com/@CentralTexasComicCon",
+      "reddit": "https://www.reddit.com/r/CentralTexasComicCon"
+    }
+  },
+  {
+    "uid": 27,
+    "name": "East Texas Comic Con",
+    "month": "May",
+    "city": "Longview",
+    "zip_code": "75601",
+    "description": "A pop culture event celebrating comics, anime, sci-fi, and more.",
+    "keywords": ["comics", "anime", "sci-fi", "pop culture"],
+    "category": "Comicon",
+    "website": "https://www.easttexascomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/EastTexasComicCon",
+      "twitter": "https://twitter.com/EastTXComicCon",
+      "instagram": "https://www.instagram.com/EastTexasComicCon",
+      "threads": "https://www.threads.net/EastTexasComicCon",
+      "tiktok": "https://www.tiktok.com/@EastTexasComicCon",
+      "reddit": "https://www.reddit.com/r/EastTexasComicCon"
+    }
+  },
+  {
+    "uid": 28,
+    "name": "West Texas Comic Con",
+    "month": "June",
+    "city": "Lubbock",
+    "zip_code": "79401",
+    "description": "A major comic convention in West Texas featuring a variety of pop culture elements.",
+    "keywords": ["comics", "pop culture", "Lubbock"],
+    "category": "Comicon",
+    "website": "https://www.westtexascomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/WestTexasComicCon",
+      "twitter": "https://twitter.com/WestTXComicCon",
+      "instagram": "https://www.instagram.com/WestTexasComicCon",
+      "threads": "https://www.threads.net/WestTexasComicCon",
+      "tiktok": "https://www.tiktok.com/@WestTexasComicCon",
+      "reddit": "https://www.reddit.com/r/WestTexasComicCon"
+    }
+  },
+  {
+    "uid": 29,
+    "name": "Hill Country Comicon",
+    "month": "April",
+    "city": "New Braunfels",
+    "zip_code": "78130",
+    "description": "Combines comics, cosplay, and a family-friendly environment.",
+    "keywords": ["comics", "cosplay", "family-friendly"],
+    "category": "Comicon",
+    "website": "https://www.hillcountrycomicon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/HillCountryComicon",
+      "twitter": "https://twitter.com/HillCountryComic",
+      "instagram": "https://www.instagram.com/HillCountryComicon",
+      "threads": "https://www.threads.net/HillCountryComicon",
+      "tiktok": "https://www.tiktok.com/@HillCountryComicon",
+      "reddit": "https://www.reddit.com/r/HillCountryComicon"
+    }
+  },
+  {
+    "uid": 30,
+    "name": "El Paso Comic Con",
+    "month": "April",
+    "city": "El Paso",
+    "zip_code": "79901",
+    "description": "Includes various aspects of pop culture with a focus on community engagement.",
+    "keywords": ["comics", "pop culture", "El Paso"],
+    "category": "Comicon",
+    "website": "https://www.elpasocomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/ElPasoComicCon",
+      "twitter": "https://twitter.com/ElPasoComicCon",
+      "instagram": "https://www.instagram.com/ElPasoComicCon",
+      "threads": "https://www.threads.net/ElPasoComicCon",
+      "tiktok": "https://www.tiktok.com/@ElPasoComicCon",
+      "reddit": "https://www.reddit.com/r/ElPasoComicCon"
+    }
+  },
+  {
+    "uid": 31,
+    "name": "South Texas Comic Con",
+    "month": "April",
+    "city": "McAllen",
+    "zip_code": "78501",
+    "description": "Premier pop-culture convention in the Rio Grande Valley with a variety of guests and activities.",
+    "keywords": ["comics", "anime", "gaming", "pop culture"],
+    "category": "Comicon",
+    "website": "https://www.southtexascomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/SouthTexasComicCon",
+      "twitter": "https://twitter.com/STXComicCon",
+      "instagram": "https://www.instagram.com/SouthTexasComicCon",
+      "threads": "https://www.threads.net/SouthTexasComicCon",
+      "tiktok": "https://www.tiktok.com/@SouthTexasComicCon",
+      "reddit": "https://www.reddit.com/r/SouthTexasComicCon"
+    }
+  },
+  {
+    "uid": 32,
+    "name": "Houston TechFest",
+    "month": "September",
+    "city": "Houston",
+    "zip_code": "77002",
+    "description": "A free technology conference focusing on various IT and development topics.",
+    "keywords": ["technology", "IT", "development"],
+    "category": "Technology Summit",
+    "website": "https://www.houstontechfest.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/HoustonTechFest",
+      "twitter": "https://twitter.com/HouTechFest",
+      "instagram": "https://www.instagram.com/HoustonTechFest",
+      "threads": "https://www.threads.net/HoustonTechFest",
+      "tiktok": "https://www.tiktok.com/@HoustonTechFest",
+      "reddit": "https://www.reddit.com/r/HoustonTechFest"
+    }
+  },
+  {
+    "uid": 33,
+    "name": "Anime Corpus Christi",
+    "month": "February",
+    "city": "Corpus Christi",
+    "zip_code": "78401",
+    "description": "Focuses on anime and Japanese pop culture with various activities and guests.",
+    "keywords": ["anime", "Japanese pop culture", "cosplay"],
+    "category": "Comicon",
+    "website": "https://www.animecorpuschristi.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/AnimeCorpusChristi",
+      "twitter": "https://twitter.com/AnimeCC",
+      "instagram": "https://www.instagram.com/AnimeCorpusChristi",
+      "threads": "https://www.threads.net/AnimeCorpusChristi",
+      "tiktok": "https://www.tiktok.com/@AnimeCorpusChristi",
+      "reddit": "https://www.reddit.com/r/AnimeCorpusChristi"
+    }
+  },
+  {
+    "uid": 34,
+    "name": "GalaxyCon Austin",
+    "month": "August",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "A large-scale pop culture convention featuring comics, movies, TV shows, and celebrity guests.",
+    "keywords": ["comics", "movies", "TV shows", "celebrity guests"],
+    "category": "Comicon",
+    "website": "https://www.galaxycon.com/austin",
+    "social_media": {
+      "facebook": "https://www.facebook.com/GalaxyConAustin",
+      "twitter": "https://twitter.com/GalaxyConAustin",
+      "instagram": "https://www.instagram.com/GalaxyConAustin",
+      "threads": "https://www.threads.net/GalaxyConAustin",
+      "tiktok": "https://www.tiktok.com/@GalaxyConAustin",
+      "reddit": "https://www.reddit.com/r/GalaxyConAustin"
+    }
+  },
+  {
+    "uid": 36,
+    "name": "Big Texas Comicon",
+    "month": "October",
+    "city": "San Antonio",
+    "zip_code": "78205",
+    "description": "A prominent comic convention in San Antonio with a wide range of pop culture content.",
+    "keywords": ["comics", "pop culture", "San Antonio"],
+    "category": "Comicon",
+    "website": "https://www.bigtexascomicon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/BigTexasComicon",
+      "twitter": "https://twitter.com/BigTexasComicon",
+      "instagram": "https://www.instagram.com/BigTexasComicon",
+      "threads": "https://www.threads.net/BigTexasComicon",
+      "tiktok": "https://www.tiktok.com/@BigTexasComicon",
+      "reddit": "https://www.reddit.com/r/BigTexasComicon"
+    }
+  },
+  {
+    "uid": 37,
+    "name": "Oni-Con",
+    "month": "October",
+    "city": "Galveston",
+    "zip_code": "77550",
+    "description": "An anime convention featuring various elements of Japanese culture, including cosplay and gaming.",
+    "keywords": ["anime", "cosplay", "gaming"],
+    "category": "Comicon",
+    "website": "https://www.oni-con.net",
+    "social_media": {
+      "facebook": "https://www.facebook.com/OniCon",
+      "twitter": "https://twitter.com/OniCon",
+      "instagram": "https://www.instagram.com/OniCon",
+      "threads": "https://www.threads.net/OniCon",
+      "tiktok": "https://www.tiktok.com/@OniCon",
+      "reddit": "https://www.reddit.com/r/OniCon"
+    }
+  }    
 ]
