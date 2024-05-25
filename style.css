@@ -26,6 +26,11 @@ h1.title {
   margin: auto;
   text-align: center;
 }
+sub {
+  text-align: center;
+  display: block;
+}
+
 img.icon {
   display: block;
   position: sticky;
