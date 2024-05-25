@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <em>${item.category}</em>
                 <h2>${item.name}</h2>
                 <h3>${item.city}, ${item.zip_code}</h3>
+                <h3>Usually in ${item.month}</h3>
                 <p>${item.description}</p>
                 <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
                 <span>

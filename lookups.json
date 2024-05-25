@@ -6,7 +6,7 @@
     "city": "Dallas",
     "zip_code": "75207",
     "description": "A pop culture event featuring comics, movies, TV shows, and celebrity guests.",
-    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture", "Dallas Comicon"],
+    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture"],
     "category": "Comicon",
     "website": "https://www.dallasfanfestival.com",
     "social_media": {
@@ -25,7 +25,7 @@
     "city": "Houston",
     "zip_code": "77010",
     "description": "One of the largest pop culture conventions in Texas, covering comics, sci-fi, anime, and gaming.",
-    "keywords": ["comics", "sci-fi", "anime", "gaming", "pop culture", "Houston Comicon"],
+    "keywords": ["comics", "sci-fi", "anime", "gaming", "pop culture"],
     "category": "Comicon",
     "website": "https://www.comicpalooza.com",
     "social_media": {
@@ -44,7 +44,7 @@
     "city": "San Antonio",
     "zip_code": "78205",
     "description": "Focuses on comics, movies, TV shows, and pop culture with various celebrity guests.",
-    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture", "San Antonio Comicon"],
+    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture"],
     "category": "Comicon",
     "website": "https://www.alamocitycomiccon.com",
     "social_media": {
@@ -63,7 +63,7 @@
     "city": "Dallas",
     "zip_code": "75261",
     "description": "A horror convention that includes celebrity guests, panels, and screenings.",
-    "keywords": ["horror", "celebrity guests", "panels", "screenings", "Dallas horror convention"],
+    "keywords": ["horror", "celebrity guests", "panels", "pop culture"],
     "category": "Comicon",
     "website": "https://www.texasfrightmareweekend.com",
     "social_media": {
@@ -82,7 +82,7 @@
     "city": "Houston",
     "zip_code": "77010",
     "description": "A large anime and Japanese pop culture convention with cosplay, gaming, and music.",
-    "keywords": ["anime", "Japanese pop culture", "cosplay", "gaming", "music", "Houston anime convention"],
+    "keywords": ["anime", "Japanese pop culture", "cosplay", "gaming", "music"],
     "category": "Comicon",
     "website": "https://www.animematsuri.com",
     "social_media": {
@@ -101,7 +101,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "A convention for fans of Rooster Teeth, gaming, and internet culture.",
-    "keywords": ["Rooster Teeth", "gaming", "internet culture", "Austin gaming convention"],
+    "keywords": ["gaming", "internet culture", "pop culture"],
     "category": "Video Game Conference",
     "website": "https://www.rtxevent.com",
     "social_media": {
@@ -120,7 +120,7 @@
     "city": "Houston",
     "zip_code": "77010",
     "description": "A pop culture convention featuring celebrities from movies, TV shows, and comics.",
-    "keywords": ["pop culture", "celebrities", "movies", "TV shows", "comics", "Houston pop culture"],
+    "keywords": ["pop culture", "celebrities", "movies", "TV shows", "comics"],
     "category": "Comicon",
     "website": "https://www.fandemictour.com",
     "social_media": {
@@ -139,7 +139,7 @@
     "city": "Dallas",
     "zip_code": "75207",
     "description": "A large pop culture event with a wide range of activities including celebrity panels, autographs, and photo ops.",
-    "keywords": ["pop culture", "celebrity panels", "autographs", "photo ops", "Dallas pop culture event"],
+    "keywords": ["pop culture", "celebrity panels", "autographs", "photo ops"],
     "category": "Comicon",
     "website": "https://www.fanexpodallas.com",
     "social_media": {
@@ -158,7 +158,7 @@
     "city": "Austin",
     "zip_code": "78641",
     "description": "A celebration of comics, movies, TV, and gaming in Austin.",
-    "keywords": ["comics", "movies", "TV", "gaming", "pop culture", "Austin Comicon"],
+    "keywords": ["comics", "movies", "TV", "gaming", "pop culture"],
     "category": "Comicon",
     "website": "https://www.greateraustincomiccon.com",
     "social_media": {
@@ -177,7 +177,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "Focused on retro gaming with exhibitors, free play arcades, and tournaments.",
-    "keywords": ["retro gaming", "exhibitors", "free play arcades", "tournaments", "Austin gaming convention"],
+    "keywords": ["retro gaming", "exhibitors", "free play arcades", "tournaments", "gaming"],
     "category": "Video Game Conference",
     "website": "https://www.classicgamefest.com",
     "social_media": {
@@ -196,7 +196,7 @@
     "city": "McAllen",
     "zip_code": "78501",
     "description": "Features comics, anime, gaming, and pop culture with various activities and guests.",
-    "keywords": ["comics", "anime", "gaming", "pop culture", "activities", "guests", "McAllen Comicon"],
+    "keywords": ["comics", "anime", "gaming", "pop culture", "activities", "guests"],
     "category": "Comicon",
     "website": "https://www.southtexascomiccon.com",
     "social_media": {
@@ -215,7 +215,7 @@
     "city": "Belton",
     "zip_code": "76513",
     "description": "A family-friendly event with a focus on comics, cosplay, and pop culture.",
-    "keywords": ["family-friendly", "comics", "cosplay", "pop culture", "Belton Comicon"],
+    "keywords": ["family-friendly", "comics", "cosplay", "pop culture"],
     "category": "Comicon",
     "website": "https://www.bellcountycomiccon.com",
     "social_media": {
@@ -234,7 +234,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "Part of the Wizard World convention series, featuring pop culture and entertainment.",
-    "keywords": ["Wizard World", "pop culture", "entertainment", "Austin Wizard World"],
+    "keywords": ["pop culture", "entertainment"],
     "category": "Comicon",
     "website": "https://www.wizardworld.com",
     "social_media": {
@@ -253,7 +253,7 @@
     "city": "San Antonio",
     "zip_code": "78205",
     "description": "A gaming festival that includes panels, tournaments, and showcases from game developers.",
-    "keywords": ["gaming", "panels", "tournaments", "showcases", "San Antonio gaming convention"],
+    "keywords": ["gaming", "panels", "tournaments", "showcases"],
     "category": "Video Game Conference",
     "website": "https://www.paxsite.com/south",
     "social_media": {
@@ -272,7 +272,7 @@
     "city": "Irving",
     "zip_code": "75039",
     "description": "A convention focused on gaming with free play areas, tournaments, and vendor booths.",
-    "keywords": ["gaming", "free play", "tournaments", "vendor booths", "Irving gaming convention"],
+    "keywords": ["gaming", "free play", "tournaments", "vendor booths"],
     "category": "Video Game Conference",
     "website": "https://www.letsplaygamingexpo.com",
     "social_media": {
@@ -291,7 +291,7 @@
     "city": "Dallas",
     "zip_code": "75207",
     "description": "A digital festival that includes esports, live music, and technology exhibits.",
-    "keywords": ["digital festival", "esports", "live music", "technology exhibits", "Dallas DreamHack"],
+    "keywords": ["digital festival", "esports", "live music", "technology exhibits"],
     "category": "Video Game Conference",
     "website": "https://www.dreamhack.com/dallas",
     "social_media": {
@@ -310,7 +310,7 @@
     "city": "Grapevine",
     "zip_code": "76051",
     "description": "A large LAN party and gaming festival featuring tournaments and panels.",
-    "keywords": ["LAN party", "gaming", "tournaments", "panels", "Grapevine QuakeCon"],
+    "keywords": ["LAN party", "gaming", "tournaments", "panels"],
     "category": "Video Game Conference",
     "website": "https://www.quakecon.org",
     "social_media": {
@@ -329,7 +329,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "A major conference and festival encompassing music, film, and interactive media.",
-    "keywords": ["music", "film", "interactive media", "Austin SXSW"],
+    "keywords": ["music", "film", "interactive media", "technology"],
     "category": "Technology Summit",
     "website": "https://www.sxsw.com",
     "social_media": {
@@ -348,7 +348,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "An annual event for Linux and open-source software enthusiasts.",
-    "keywords": ["Linux", "open-source", "software", "Austin Linux Fest"],
+    "keywords": ["Linux", "open-source", "software", "technology"],
     "category": "Technology Summit",
     "website": "https://www.texaslinuxfest.org",
     "social_media": {
@@ -367,7 +367,7 @@
     "city": "San Antonio",
     "zip_code": "78205",
     "description": "A cybersecurity conference with workshops, panels, and keynotes from industry leaders.",
-    "keywords": ["cybersecurity", "workshops", "panels", "keynotes", "San Antonio Cyber Summit"],
+    "keywords": ["cybersecurity", "workshops", "keynotes", "technology"],
     "category": "Technology Summit",
     "website": "https://www.texascybersummit.org",
     "social_media": {
@@ -386,7 +386,7 @@
     "city": "Houston",
     "zip_code": "77002",
     "description": "A free technology conference with sessions on various IT and development topics.",
-    "keywords": ["technology", "IT", "development", "Houston TechFest"],
+    "keywords": ["technology", "IT", "development"],
     "category": "Technology Summit",
     "website": "https://www.houstontechfest.com",
     "social_media": {
@@ -405,7 +405,7 @@
     "city": "Austin",
     "zip_code": "78701",
     "description": "A business and technology innovation conference with exhibits and speakers.",
-    "keywords": ["business", "technology", "innovation", "Austin InnoTech"],
+    "keywords": ["business", "technology", "innovation"],
     "category": "Technology Summit",
     "website": "https://www.innotechconferences.com/austin",
     "social_media": {
@@ -424,7 +424,7 @@
     "city": "Dallas",
     "zip_code": "75207",
     "description": "One of the oldest continually running anime conventions in the U.S., featuring cosplay, gaming, and more.",
-    "keywords": ["anime", "cosplay", "gaming", "Dallas A-Kon"],
+    "keywords": ["anime", "cosplay", "gaming"],
     "category": "Comicon",
     "website": "https://www.a-kon.com",
     "social_media": {
@@ -443,7 +443,7 @@
     "city": "San Antonio",
     "zip_code": "78205",
     "description": "A large anime convention in South Texas, including panels, concerts, and cosplay.",
-    "keywords": ["anime", "panels", "concerts", "cosplay", "San Antonio San Japan"],
+    "keywords": ["anime", "panels", "concerts", "cosplay"],
     "category": "Comicon",
     "website": "https://www.san-japan.org",
     "social_media": {
@@ -462,7 +462,7 @@
     "city": "College Station",
     "zip_code": "77840",
     "description": "The oldest student-run science fiction convention in the U.S., covering sci-fi, fantasy, and gaming.",
-    "keywords": ["sci-fi", "fantasy", "gaming", "College Station AggieCon"],
+    "keywords": ["sci-fi", "fantasy", "gaming"],
     "category": "Comicon",
     "website": "https://www.aggiecon.org",
     "social_media": {
