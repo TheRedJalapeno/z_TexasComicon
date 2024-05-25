@@ -1,0 +1,477 @@
+[
+  {
+    "uid": 1,
+    "name": "Dallas Fan Festival",
+    "month": "October",
+    "city": "Dallas",
+    "zip_code": "75207",
+    "description": "A pop culture event featuring comics, movies, TV shows, and celebrity guests.",
+    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture", "Dallas Comicon"],
+    "category": "Comicon",
+    "website": "https://www.dallasfanfestival.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/DallasFanFestival",
+      "twitter": "https://twitter.com/DallasFanFest",
+      "instagram": "https://www.instagram.com/DallasFanFestival",
+      "threads": "https://www.threads.net/DallasFanFestival",
+      "tiktok": "https://www.tiktok.com/@DallasFanFestival",
+      "reddit": "https://www.reddit.com/r/DallasFanFestival"
+    }
+  },
+  {
+    "uid": 2,
+    "name": "Comicpalooza",
+    "month": "May",
+    "city": "Houston",
+    "zip_code": "77010",
+    "description": "One of the largest pop culture conventions in Texas, covering comics, sci-fi, anime, and gaming.",
+    "keywords": ["comics", "sci-fi", "anime", "gaming", "pop culture", "Houston Comicon"],
+    "category": "Comicon",
+    "website": "https://www.comicpalooza.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/Comicpalooza",
+      "twitter": "https://twitter.com/Comicpalooza",
+      "instagram": "https://www.instagram.com/Comicpalooza",
+      "threads": "https://www.threads.net/Comicpalooza",
+      "tiktok": "https://www.tiktok.com/@Comicpalooza",
+      "reddit": "https://www.reddit.com/r/Comicpalooza"
+    }
+  },
+  {
+    "uid": 3,
+    "name": "Alamo City Comic Con",
+    "month": "October",
+    "city": "San Antonio",
+    "zip_code": "78205",
+    "description": "Focuses on comics, movies, TV shows, and pop culture with various celebrity guests.",
+    "keywords": ["comics", "movies", "TV shows", "celebrity guests", "pop culture", "San Antonio Comicon"],
+    "category": "Comicon",
+    "website": "https://www.alamocitycomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/AlamoCityComicCon",
+      "twitter": "https://twitter.com/AlamoCityComic",
+      "instagram": "https://www.instagram.com/AlamoCityComicCon",
+      "threads": "https://www.threads.net/AlamoCityComicCon",
+      "tiktok": "https://www.tiktok.com/@AlamoCityComicCon",
+      "reddit": "https://www.reddit.com/r/AlamoCityComicCon"
+    }
+  },
+  {
+    "uid": 4,
+    "name": "Texas Frightmare Weekend",
+    "month": "May",
+    "city": "Dallas",
+    "zip_code": "75261",
+    "description": "A horror convention that includes celebrity guests, panels, and screenings.",
+    "keywords": ["horror", "celebrity guests", "panels", "screenings", "Dallas horror convention"],
+    "category": "Comicon",
+    "website": "https://www.texasfrightmareweekend.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/TexasFrightmareWeekend",
+      "twitter": "https://twitter.com/TXFrightmare",
+      "instagram": "https://www.instagram.com/TexasFrightmareWeekend",
+      "threads": "https://www.threads.net/TexasFrightmareWeekend",
+      "tiktok": "https://www.tiktok.com/@TexasFrightmareWeekend",
+      "reddit": "https://www.reddit.com/r/TexasFrightmareWeekend"
+    }
+  },
+  {
+    "uid": 5,
+    "name": "Anime Matsuri",
+    "month": "July",
+    "city": "Houston",
+    "zip_code": "77010",
+    "description": "A large anime and Japanese pop culture convention with cosplay, gaming, and music.",
+    "keywords": ["anime", "Japanese pop culture", "cosplay", "gaming", "music", "Houston anime convention"],
+    "category": "Comicon",
+    "website": "https://www.animematsuri.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/AnimeMatsuri",
+      "twitter": "https://twitter.com/AnimeMatsuri",
+      "instagram": "https://www.instagram.com/AnimeMatsuri",
+      "threads": "https://www.threads.net/AnimeMatsuri",
+      "tiktok": "https://www.tiktok.com/@AnimeMatsuri",
+      "reddit": "https://www.reddit.com/r/AnimeMatsuri"
+    }
+  },
+  {
+    "uid": 6,
+    "name": "RTX Austin",
+    "month": "July",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "A convention for fans of Rooster Teeth, gaming, and internet culture.",
+    "keywords": ["Rooster Teeth", "gaming", "internet culture", "Austin gaming convention"],
+    "category": "Video Game Conference",
+    "website": "https://www.rtxevent.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/RTXEvent",
+      "twitter": "https://twitter.com/RTXEvent",
+      "instagram": "https://www.instagram.com/RTXEvent",
+      "threads": "https://www.threads.net/RTXEvent",
+      "tiktok": "https://www.tiktok.com/@RTXEvent",
+      "reddit": "https://www.reddit.com/r/RTXEvent"
+    }
+  },
+  {
+    "uid": 7,
+    "name": "Fandemic Tour",
+    "month": "October",
+    "city": "Houston",
+    "zip_code": "77010",
+    "description": "A pop culture convention featuring celebrities from movies, TV shows, and comics.",
+    "keywords": ["pop culture", "celebrities", "movies", "TV shows", "comics", "Houston pop culture"],
+    "category": "Comicon",
+    "website": "https://www.fandemictour.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/FandemicTour",
+      "twitter": "https://twitter.com/FandemicTour",
+      "instagram": "https://www.instagram.com/FandemicTour",
+      "threads": "https://www.threads.net/FandemicTour",
+      "tiktok": "https://www.tiktok.com/@FandemicTour",
+      "reddit": "https://www.reddit.com/r/FandemicTour"
+    }
+  },
+  {
+    "uid": 8,
+    "name": "Fan Expo Dallas",
+    "month": "June",
+    "city": "Dallas",
+    "zip_code": "75207",
+    "description": "A large pop culture event with a wide range of activities including celebrity panels, autographs, and photo ops.",
+    "keywords": ["pop culture", "celebrity panels", "autographs", "photo ops", "Dallas pop culture event"],
+    "category": "Comicon",
+    "website": "https://www.fanexpodallas.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/FanExpoDallas",
+      "twitter": "https://twitter.com/FanExpoDallas",
+      "instagram": "https://www.instagram.com/FanExpoDallas",
+      "threads": "https://www.threads.net/FanExpoDallas",
+      "tiktok": "https://www.tiktok.com/@FanExpoDallas",
+      "reddit": "https://www.reddit.com/r/FanExpoDallas"
+    }
+  },
+  {
+    "uid": 9,
+    "name": "Greater Austin Comic Con",
+    "month": "June",
+    "city": "Austin",
+    "zip_code": "78641",
+    "description": "A celebration of comics, movies, TV, and gaming in Austin.",
+    "keywords": ["comics", "movies", "TV", "gaming", "pop culture", "Austin Comicon"],
+    "category": "Comicon",
+    "website": "https://www.greateraustincomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/GreaterAustinComicCon",
+      "twitter": "https://twitter.com/AustinComicCon",
+      "instagram": "https://www.instagram.com/GreaterAustinComicCon",
+      "threads": "https://www.threads.net/GreaterAustinComicCon",
+      "tiktok": "https://www.tiktok.com/@GreaterAustinComicCon",
+      "reddit": "https://www.reddit.com/r/GreaterAustinComicCon"
+    }
+  },
+  {
+    "uid": 10,
+    "name": "Classic Game Fest",
+    "month": "July",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "Focused on retro gaming with exhibitors, free play arcades, and tournaments.",
+    "keywords": ["retro gaming", "exhibitors", "free play arcades", "tournaments", "Austin gaming convention"],
+    "category": "Video Game Conference",
+    "website": "https://www.classicgamefest.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/ClassicGameFest",
+      "twitter": "https://twitter.com/ClassicGameFest",
+      "instagram": "https://www.instagram.com/ClassicGameFest",
+      "threads": "https://www.threads.net/ClassicGameFest",
+      "tiktok": "https://www.tiktok.com/@ClassicGameFest",
+      "reddit": "https://www.reddit.com/r/ClassicGameFest"
+    }
+  },
+  {
+    "uid": 11,
+    "name": "South Texas Comic Con",
+    "month": "April",
+    "city": "McAllen",
+    "zip_code": "78501",
+    "description": "Features comics, anime, gaming, and pop culture with various activities and guests.",
+    "keywords": ["comics", "anime", "gaming", "pop culture", "activities", "guests", "McAllen Comicon"],
+    "category": "Comicon",
+    "website": "https://www.southtexascomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/SouthTexasComicCon",
+      "twitter": "https://twitter.com/STXComicCon",
+      "instagram": "https://www.instagram.com/SouthTexasComicCon",
+      "threads": "https://www.threads.net/SouthTexasComicCon",
+      "tiktok": "https://www.tiktok.com/@SouthTexasComicCon",
+      "reddit": "https://www.reddit.com/r/SouthTexasComicCon"
+    }
+  },
+  {
+    "uid": 12,
+    "name": "Bell County Comic Con",
+    "month": "August",
+    "city": "Belton",
+    "zip_code": "76513",
+    "description": "A family-friendly event with a focus on comics, cosplay, and pop culture.",
+    "keywords": ["family-friendly", "comics", "cosplay", "pop culture", "Belton Comicon"],
+    "category": "Comicon",
+    "website": "https://www.bellcountycomiccon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/BellCountyComicCon",
+      "twitter": "https://twitter.com/BellCountyComic",
+      "instagram": "https://www.instagram.com/BellCountyComicCon",
+      "threads": "https://www.threads.net/BellCountyComicCon",
+      "tiktok": "https://www.tiktok.com/@BellCountyComicCon",
+      "reddit": "https://www.reddit.com/r/BellCountyComicCon"
+    }
+  },
+  {
+    "uid": 13,
+    "name": "Wizard World Austin",
+    "month": "November",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "Part of the Wizard World convention series, featuring pop culture and entertainment.",
+    "keywords": ["Wizard World", "pop culture", "entertainment", "Austin Wizard World"],
+    "category": "Comicon",
+    "website": "https://www.wizardworld.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/WizardWorld",
+      "twitter": "https://twitter.com/WizardWorld",
+      "instagram": "https://www.instagram.com/WizardWorld",
+      "threads": "https://www.threads.net/WizardWorld",
+      "tiktok": "https://www.tiktok.com/@WizardWorld",
+      "reddit": "https://www.reddit.com/r/WizardWorld"
+    }
+  },
+  {
+    "uid": 14,
+    "name": "PAX South",
+    "month": "January",
+    "city": "San Antonio",
+    "zip_code": "78205",
+    "description": "A gaming festival that includes panels, tournaments, and showcases from game developers.",
+    "keywords": ["gaming", "panels", "tournaments", "showcases", "San Antonio gaming convention"],
+    "category": "Video Game Conference",
+    "website": "https://www.paxsite.com/south",
+    "social_media": {
+      "facebook": "https://www.facebook.com/PAX",
+      "twitter": "https://twitter.com/PAX",
+      "instagram": "https://www.instagram.com/PAX",
+      "threads": "https://www.threads.net/PAX",
+      "tiktok": "https://www.tiktok.com/@PAX",
+      "reddit": "https://www.reddit.com/r/PAX"
+    }
+  },
+  {
+    "uid": 15,
+    "name": "Let's Play Gaming Expo",
+    "month": "August",
+    "city": "Irving",
+    "zip_code": "75039",
+    "description": "A convention focused on gaming with free play areas, tournaments, and vendor booths.",
+    "keywords": ["gaming", "free play", "tournaments", "vendor booths", "Irving gaming convention"],
+    "category": "Video Game Conference",
+    "website": "https://www.letsplaygamingexpo.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/LetsPlayGamingExpo",
+      "twitter": "https://twitter.com/LetsPlayExpo",
+      "instagram": "https://www.instagram.com/LetsPlayGamingExpo",
+      "threads": "https://www.threads.net/LetsPlayGamingExpo",
+      "tiktok": "https://www.tiktok.com/@LetsPlayGamingExpo",
+      "reddit": "https://www.reddit.com/r/LetsPlayGamingExpo"
+    }
+  },
+  {
+    "uid": 16,
+    "name": "DreamHack Dallas",
+    "month": "June",
+    "city": "Dallas",
+    "zip_code": "75207",
+    "description": "A digital festival that includes esports, live music, and technology exhibits.",
+    "keywords": ["digital festival", "esports", "live music", "technology exhibits", "Dallas DreamHack"],
+    "category": "Video Game Conference",
+    "website": "https://www.dreamhack.com/dallas",
+    "social_media": {
+      "facebook": "https://www.facebook.com/DreamHack",
+      "twitter": "https://twitter.com/DreamHack",
+      "instagram": "https://www.instagram.com/DreamHack",
+      "threads": "https://www.threads.net/DreamHack",
+      "tiktok": "https://www.tiktok.com/@DreamHack",
+      "reddit": "https://www.reddit.com/r/DreamHack"
+    }
+  },
+  {
+    "uid": 17,
+    "name": "QuakeCon",
+    "month": "August",
+    "city": "Grapevine",
+    "zip_code": "76051",
+    "description": "A large LAN party and gaming festival featuring tournaments and panels.",
+    "keywords": ["LAN party", "gaming", "tournaments", "panels", "Grapevine QuakeCon"],
+    "category": "Video Game Conference",
+    "website": "https://www.quakecon.org",
+    "social_media": {
+      "facebook": "https://www.facebook.com/QuakeCon",
+      "twitter": "https://twitter.com/QuakeCon",
+      "instagram": "https://www.instagram.com/QuakeCon",
+      "threads": "https://www.threads.net/QuakeCon",
+      "tiktok": "https://www.tiktok.com/@QuakeCon",
+      "reddit": "https://www.reddit.com/r/QuakeCon"
+    }
+  },
+  {
+    "uid": 18,
+    "name": "SXSW",
+    "month": "March",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "A major conference and festival encompassing music, film, and interactive media.",
+    "keywords": ["music", "film", "interactive media", "Austin SXSW"],
+    "category": "Technology Summit",
+    "website": "https://www.sxsw.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/SXSW",
+      "twitter": "https://twitter.com/SXSW",
+      "instagram": "https://www.instagram.com/SXSW",
+      "threads": "https://www.threads.net/SXSW",
+      "tiktok": "https://www.tiktok.com/@SXSW",
+      "reddit": "https://www.reddit.com/r/SXSW"
+    }
+  },
+  {
+    "uid": 19,
+    "name": "Texas Linux Fest",
+    "month": "May",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "An annual event for Linux and open-source software enthusiasts.",
+    "keywords": ["Linux", "open-source", "software", "Austin Linux Fest"],
+    "category": "Technology Summit",
+    "website": "https://www.texaslinuxfest.org",
+    "social_media": {
+      "facebook": "https://www.facebook.com/TexasLinuxFest",
+      "twitter": "https://twitter.com/TexasLinuxFest",
+      "instagram": "https://www.instagram.com/TexasLinuxFest",
+      "threads": "https://www.threads.net/TexasLinuxFest",
+      "tiktok": "https://www.tiktok.com/@TexasLinuxFest",
+      "reddit": "https://www.reddit.com/r/TexasLinuxFest"
+    }
+  },
+  {
+    "uid": 20,
+    "name": "Texas Cyber Summit",
+    "month": "October",
+    "city": "San Antonio",
+    "zip_code": "78205",
+    "description": "A cybersecurity conference with workshops, panels, and keynotes from industry leaders.",
+    "keywords": ["cybersecurity", "workshops", "panels", "keynotes", "San Antonio Cyber Summit"],
+    "category": "Technology Summit",
+    "website": "https://www.texascybersummit.org",
+    "social_media": {
+      "facebook": "https://www.facebook.com/TexasCyberSummit",
+      "twitter": "https://twitter.com/TexasCyber",
+      "instagram": "https://www.instagram.com/TexasCyberSummit",
+      "threads": "https://www.threads.net/TexasCyberSummit",
+      "tiktok": "https://www.tiktok.com/@TexasCyberSummit",
+      "reddit": "https://www.reddit.com/r/TexasCyberSummit"
+    }
+  },
+  {
+    "uid": 21,
+    "name": "Houston TechFest",
+    "month": "September",
+    "city": "Houston",
+    "zip_code": "77002",
+    "description": "A free technology conference with sessions on various IT and development topics.",
+    "keywords": ["technology", "IT", "development", "Houston TechFest"],
+    "category": "Technology Summit",
+    "website": "https://www.houstontechfest.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/HoustonTechFest",
+      "twitter": "https://twitter.com/HouTechFest",
+      "instagram": "https://www.instagram.com/HoustonTechFest",
+      "threads": "https://www.threads.net/HoustonTechFest",
+      "tiktok": "https://www.tiktok.com/@HoustonTechFest",
+      "reddit": "https://www.reddit.com/r/HoustonTechFest"
+    }
+  },
+  {
+    "uid": 22,
+    "name": "InnoTech Austin",
+    "month": "November",
+    "city": "Austin",
+    "zip_code": "78701",
+    "description": "A business and technology innovation conference with exhibits and speakers.",
+    "keywords": ["business", "technology", "innovation", "Austin InnoTech"],
+    "category": "Technology Summit",
+    "website": "https://www.innotechconferences.com/austin",
+    "social_media": {
+      "facebook": "https://www.facebook.com/InnoTechAustin",
+      "twitter": "https://twitter.com/InnoTechAustin",
+      "instagram": "https://www.instagram.com/InnoTechAustin",
+      "threads": "https://www.threads.net/InnoTechAustin",
+      "tiktok": "https://www.tiktok.com/@InnoTechAustin",
+      "reddit": "https://www.reddit.com/r/InnoTechAustin"
+    }
+  },
+  {
+    "uid": 23,
+    "name": "A-Kon",
+    "month": "June",
+    "city": "Dallas",
+    "zip_code": "75207",
+    "description": "One of the oldest continually running anime conventions in the U.S., featuring cosplay, gaming, and more.",
+    "keywords": ["anime", "cosplay", "gaming", "Dallas A-Kon"],
+    "category": "Comicon",
+    "website": "https://www.a-kon.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/A-Kon",
+      "twitter": "https://twitter.com/A_Kon",
+      "instagram": "https://www.instagram.com/A_Kon",
+      "threads": "https://www.threads.net/A_Kon",
+      "tiktok": "https://www.tiktok.com/@A_Kon",
+      "reddit": "https://www.reddit.com/r/A_Kon"
+    }
+  },
+  {
+    "uid": 24,
+    "name": "San Japan",
+    "month": "September",
+    "city": "San Antonio",
+    "zip_code": "78205",
+    "description": "A large anime convention in South Texas, including panels, concerts, and cosplay.",
+    "keywords": ["anime", "panels", "concerts", "cosplay", "San Antonio San Japan"],
+    "category": "Comicon",
+    "website": "https://www.san-japan.org",
+    "social_media": {
+      "facebook": "https://www.facebook.com/SanJapan",
+      "twitter": "https://twitter.com/SanJapan",
+      "instagram": "https://www.instagram.com/SanJapan",
+      "threads": "https://www.threads.net/SanJapan",
+      "tiktok": "https://www.tiktok.com/@SanJapan",
+      "reddit": "https://www.reddit.com/r/SanJapan"
+    }
+  },
+  {
+    "uid": 25,
+    "name": "AggieCon",
+    "month": "March",
+    "city": "College Station",
+    "zip_code": "77840",
+    "description": "The oldest student-run science fiction convention in the U.S., covering sci-fi, fantasy, and gaming.",
+    "keywords": ["sci-fi", "fantasy", "gaming", "College Station AggieCon"],
+    "category": "Comicon",
+    "website": "https://www.aggiecon.org",
+    "social_media": {
+      "facebook": "https://www.facebook.com/AggieCon",
+      "twitter": "https://twitter.com/AggieCon",
+      "instagram": "https://www.instagram.com/AggieCon",
+      "threads": "https://www.threads.net/AggieCon",
+      "tiktok": "https://www.tiktok.com/@AggieCon",
+      "reddit": "https://www.reddit.com/r/AggieCon"
+    }
+  }
+]

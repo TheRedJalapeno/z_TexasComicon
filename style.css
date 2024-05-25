@@ -133,6 +133,17 @@ button {
   box-shadow: none;
 }
 
+.box keyword {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 5px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.box social a {
+  display: block;
+}
+
 
 
 

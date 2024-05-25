@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Writer by AiryChat</title>
+    <title>Texas Comicon</title>
     <link rel="icon" href="pencil-solid.svg" type="image/svg" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,22 +11,17 @@
     <div class="mainContainer">
       <div class="header">
         <img class="icon" src="pencil-solid.svg">
-        <h1 class="title">AI Book Writer</h1>
+        <h1 class="title">Texas Comicons</h1>
       </div>
       
       <div class="flexContainer">
         <div class="boxLarge">
-          <h3 class="inputLabel">Describe your book in great detail</h3>
-          <textarea id="textInput" class="textBox" placeholder="A surreal action adventure set at Burning Man from the perspective of Dick Bubkis, a wannabe tech mogul, while he is having a bad trip."></textarea>
-          
+          <h3 class="inputLabel">What are you looking for?</h3>
+          <div id="keywordContainer"></div>
+
           <div class="flexContainerSmall">
             <div class="boxSmall">
-              <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-              <stripe-buy-button
-                buy-button-id="buy_btn_1OF3b5EeRyxN4jWlBb3ijtSg"
-                publishable-key="pk_live_51NBgrbEeRyxN4jWlhNMqAp6tdPNwE1x7FstqKVtzjn15Xz2LD6X9so1ks0UeA8BliTookRda8nT3145mRQ0IRukN00egR20fQn"
-              >
-              </stripe-buy-button>
+<!
             </div>
           </div>
           
@@ -36,11 +31,80 @@
       </div>
     </div>
 
+
+    
+    <div id="content" class="flexContainer"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('lookups.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('content');
+                    const keywordSet = new Set();
+    
+                    data.forEach(item => {
+                        // Collect keywords
+                        item.keywords.forEach(keyword => keywordSet.add(keyword));
+    
+                        // Create event box
+                        const box = document.createElement('div');
+                        box.className = 'box';
+    
+                        box.innerHTML = `
+                            <em>${item.category}</em>
+                            <h2>${item.name}</h2>
+                            <h3>${item.city}, ${item.zip_code}</h3>
+                            <p>${item.description}</p>
+                            <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
+                            <span>
+                                <h3>Socials</h3>
+                                <social>
+                                    <a href="${item.social_media.instagram}" target="_blank">Instagram</a>
+                                    <a href="${item.social_media.threads}" target="_blank">Threads</a>
+                                    <a href="${item.social_media.facebook}" target="_blank">Facebook</a>
+                                    <a href="${item.social_media.twitter}" target="_blank">Twitter</a>
+                                    <a href="${item.website}" target="_blank">Website</a>
+                                </social>
+                            </span>
+                        `;
+    
+                        container.appendChild(box);
+                    });
+    
+                    // Create keyword selection checkboxes
+                    const keywordContainer = document.getElementById('keywordContainer');
+                    keywordContainer.innerHTML = `
+                        <h3>Select Keywords</h3>
+                        ${Array.from(keywordSet).map(keyword => `
+                            <label>
+                                <input type="checkbox" value="${keyword}"> ${keyword}
+                            </label>
+                        `).join('<br>')}
+                    `;
+                })
+                .catch(error => console.error('Error fetching the JSON data:', error));
+        });
+    </script>
+
+
     <div class="flexContainer">
       <div class="box">
         <svg class="containerIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
-          <h3>30 minutes or less</h3>
-          <p>Become a published author faster than you ever imagined. Get a functional draft in your inbox in as little as 30 minutes and save months of drafts.</p>
+          <em>category</em>  
+          <h2>name</h2>
+          <h3>city, zipcode</h3>
+          <p>description</p>
+          <span><keyword>keyword1</keyword><keyword>keyword2</keyword></span>
+          <span><h3>Socials</h3>
+            <social>
+              <a href="#">Instagram</a><br>
+              <a href="#">Threads</a><br>
+              <a href="#">Facebook</a><br>
+              <a href="#">Twitter</a><br>
+              <a href="#">Website</a><br>
+            </social>
+          </span>
       </div>
       <div class="box">
         <svg class="containerIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
