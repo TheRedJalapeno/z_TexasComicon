@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dataStore = data;
             populateFilters(data);
             populateEvents(data);
+            updateResultCount(data.length);  // Initialize the result count with the total number of results
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
 

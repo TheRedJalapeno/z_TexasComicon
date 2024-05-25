@@ -11,10 +11,14 @@ body {
   font-family: sans-serif;
   color: #333;
   padding: 20px;
+  background: url('massive_anime_dance_party.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
 .mainContainer {
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
 }
 .inputContainer {
   width: 100%;
@@ -101,10 +105,14 @@ button {
   padding: 2em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+.header {
+  padding: 20px;
+}
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
   margin: 3em;
+  padding: 20px;
 }
 .box {
   flex: 1 1 300px;
