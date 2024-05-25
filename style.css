@@ -144,6 +144,43 @@ button {
   display: block;
 }
 
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 300px;
+}
+.box keyword {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 5px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.box social a {
+  display: block;
+}
+.selectorContainer {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.selectorItem {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.selectorItem.selected {
+  background-color: lightgreen;
+}
 
 
 
