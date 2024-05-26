@@ -18,13 +18,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const contentContainer = document.getElementById('content');
     const resultCountElement = document.getElementById('resultCount');
     const noResultsMessage = document.getElementById('noResultsMessage');
+    const toggleKeywordsButton = document.createElement('button');
 
     let selectedCategories = new Set();
     let selectedKeywords = new Set();
     let selectedCities = new Set();
     let selectedMonths = new Set();
+    let keywordsExpanded = false;
 
     const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    toggleKeywordsButton.className = 'toggle-button';
+    toggleKeywordsButton.textContent = '⯆';
+    toggleKeywordsButton.addEventListener('click', () => {
+        keywordsExpanded = !keywordsExpanded;
+        toggleKeywordsButton.textContent = keywordsExpanded ? '⯅' : '⯆';
+        const keywordFrequency = getKeywordFrequency();
+        const sortedKeywords = Object.keys(keywordFrequency).sort((a, b) => keywordFrequency[b] - keywordFrequency[a]);
+        addSelectors(sortedKeywords, keywordContainer, selectedKeywords);
+    });
+
+    keywordContainer.appendChild(toggleKeywordsButton);
 
     function populateFilters(data) {
         const categories = new Set();
@@ -58,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addSelectors(items, container, selectedSet) {
         container.innerHTML = '';
-        items.forEach(item => {
+        const visibleItems = keywordsExpanded ? items : items.slice(0, 5);
+
+        visibleItems.forEach(item => {
             const element = document.createElement('span');
             element.className = 'selectorItem';
             element.textContent = item;
@@ -74,6 +90,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             container.appendChild(element);
         });
+
+        if (!keywordsExpanded && items.length > 5) {
+            container.appendChild(toggleKeywordsButton);
+        }
+    }
+
+    function getKeywordFrequency() {
+        const keywordFrequency = {};
+        dataStore.forEach(item => {
+            item.keywords.forEach(keyword => {
+                if (keywordFrequency[keyword]) {
+                    keywordFrequency[keyword]++;
+                } else {
+                    keywordFrequency[keyword] = 1;
+                }
+            });
+        });
+        return keywordFrequency;
     }
 
     function filterEvents() {

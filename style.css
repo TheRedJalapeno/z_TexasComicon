@@ -181,8 +181,10 @@ button {
 .selectorContainer {
   border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Make containers slightly transparent */
   padding: 10px;
   margin: 10px 0;
+  position: relative;
 }
 .selectorItem {
   display: inline-block;
@@ -198,12 +200,27 @@ button {
 #resultCount {
   font-weight: bold;
   margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Make result count slightly transparent */
+  padding: 10px;
+  border-radius: 5px;
 }
 #noResultsMessage {
   font-size: 1.2em;
   color: red;
   margin: 20px 0;
   display: none;
+  background-color: rgba(255, 255, 255, 0.9); /* Make no results message slightly transparent */
+  padding: 10px;
+  border-radius: 5px;
+}
+.toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  background: none;
+  border: none;
 }
 
 
@@ -212,8 +229,6 @@ button {
     flex-direction: column;
     margin: auto;
 }
-
-
 body {
   color: #333;
   padding: 20px;
