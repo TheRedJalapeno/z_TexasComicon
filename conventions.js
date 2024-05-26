@@ -94,6 +94,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const box = document.createElement('div');
             box.className = 'box';
 
+            const socialLinks = [
+                { url: item.social_media.instagram, name: 'Instagram' },
+                { url: item.social_media.threads, name: 'Threads' },
+                { url: item.social_media.facebook, name: 'Facebook' },
+                { url: item.social_media.twitter, name: 'Twitter' },
+                { url: item.social_media.reddit, name: 'Reddit' },
+                { url: item.website, name: 'Website' }
+            ].filter(link => link.url !== null).map(link => 
+                `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank">${link.name}</a>`
+            ).join('<br>');
+
             box.innerHTML = `
                 <em>${item.category}</em>
                 <h2>${item.name}</h2>
@@ -104,11 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span>
                     <h3>Socials</h3>
                     <social>
-                        <a href="${addUTMParams(item.social_media.instagram, 'instagram')}" target="_blank">Instagram</a>
-                        <a href="${addUTMParams(item.social_media.threads, 'threads')}" target="_blank">Threads</a>
-                        <a href="${addUTMParams(item.social_media.facebook, 'facebook')}" target="_blank">Facebook</a>
-                        <a href="${addUTMParams(item.social_media.twitter, 'twitter')}" target="_blank">Twitter</a>
-                        <a href="${addUTMParams(item.website, 'website')}" target="_blank">Website</a>
+                        ${socialLinks}
                     </social>
                 </span>
             `;
