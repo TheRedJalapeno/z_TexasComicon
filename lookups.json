@@ -1,7 +1,7 @@
 [
   {
     "uid": 1,
-    "name": "Dallas Fan Festival",
+    "name": "Fan Expo Dallas",
     "month": "October",
     "city": "Dallas",
     "zip_code": "75207",
@@ -10,12 +10,13 @@
     "category": "Comicon",
     "website": "https://www.dallasfanfestival.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/DallasFanFestival",
-      "twitter": "https://twitter.com/DallasFanFest",
-      "instagram": "https://www.instagram.com/DallasFanFestival",
-      "threads": "https://www.threads.net/DallasFanFestival",
-      "tiktok": "https://www.tiktok.com/@DallasFanFestival",
-      "reddit": "https://www.reddit.com/r/DallasFanFestival"
+      "facebook": "https://www.facebook.com/FANEXPODallas/",
+      "twitter": "https://twitter.com/FANEXPODallas/",
+      "instagram": "https://www.instagram.com/FANEXPODallas",
+      "threads": "https://www.threads.net/FANEXPODallas",
+      "tiktok": "https://www.tiktok.com/@fanexpohq/",
+      "reddit": null,
+      "youtube": "https://www.youtube.com/channel/UCEOrTO8A5Nq9oQ1NbvLUxrg/"
     }
   },
   {
@@ -29,12 +30,12 @@
     "category": "Comicon",
     "website": "https://www.comicpalooza.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/Comicpalooza",
+      "facebook": null,
       "twitter": "https://twitter.com/Comicpalooza",
       "instagram": "https://www.instagram.com/Comicpalooza",
-      "threads": "https://www.threads.net/Comicpalooza",
-      "tiktok": "https://www.tiktok.com/@Comicpalooza",
-      "reddit": "https://www.reddit.com/r/Comicpalooza"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -48,12 +49,12 @@
     "category": "Comicon",
     "website": "https://www.alamocitycomiccon.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/AlamoCityComicCon",
-      "twitter": "https://twitter.com/AlamoCityComic",
-      "instagram": "https://www.instagram.com/AlamoCityComicCon",
-      "threads": "https://www.threads.net/AlamoCityComicCon",
-      "tiktok": "https://www.tiktok.com/@AlamoCityComicCon",
-      "reddit": "https://www.reddit.com/r/AlamoCityComicCon"
+      "facebook": "https://www.facebook.com/alamocitycomiccon/",
+      "twitter": "https://twitter.com/AlamoCityCon",
+      "instagram": "https://www.instagram.com/alamocitycomiccon/",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -67,12 +68,13 @@
     "category": "Comicon",
     "website": "https://www.texasfrightmareweekend.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/TexasFrightmareWeekend",
-      "twitter": "https://twitter.com/TXFrightmare",
-      "instagram": "https://www.instagram.com/TexasFrightmareWeekend",
-      "threads": "https://www.threads.net/TexasFrightmareWeekend",
-      "tiktok": "https://www.tiktok.com/@TexasFrightmareWeekend",
-      "reddit": "https://www.reddit.com/r/TexasFrightmareWeekend"
+      "facebook": "https://www.facebook.com/texasfrightmareweekend",
+      "twitter": null,
+      "instagram": "https://www.instagram.com/texasfrightmareweekend/",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null,
+      "youtube": "https://www.youtube.com/@texasfrightmareweekendofficial"
     }
   },
   {
@@ -86,12 +88,12 @@
     "category": "Comicon",
     "website": "https://www.animematsuri.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/AnimeMatsuri",
-      "twitter": "https://twitter.com/AnimeMatsuri",
-      "instagram": "https://www.instagram.com/AnimeMatsuri",
-      "threads": "https://www.threads.net/AnimeMatsuri",
-      "tiktok": "https://www.tiktok.com/@AnimeMatsuri",
-      "reddit": "https://www.reddit.com/r/AnimeMatsuri"
+      "facebook": null,
+      "twitter": null,
+      "instagram": "https://www.instagram.com/animematsuri/",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -103,58 +105,21 @@
     "description": "A convention for fans of Rooster Teeth, gaming, and internet culture.",
     "keywords": ["gaming", "internet culture", "pop culture"],
     "category": "Video Game Conference",
-    "website": "https://www.rtxevent.com",
+    "website": "https://www.rtxaustin.com/",
     "social_media": {
-      "facebook": "https://www.facebook.com/RTXEvent",
-      "twitter": "https://twitter.com/RTXEvent",
-      "instagram": "https://www.instagram.com/RTXEvent",
+      "facebook": "https://www.facebook.com/roosterteeth",
+      "twitter": "https://twitter.com/roosterteeth",
+      "instagram": "https://www.instagram.com/roosterteeth",
       "threads": null,
-      "tiktok": "https://www.tiktok.com/@RTXEvent",
-      "reddit": "https://www.reddit.com/r/RTXEvent"
-    }
-  },
-  {
-    "uid": 7,
-    "name": "Fandemic Tour",
-    "month": "October",
-    "city": "Houston",
-    "zip_code": "77010",
-    "description": "A pop culture convention featuring celebrities from movies, TV shows, and comics.",
-    "keywords": ["pop culture", "celebrities", "movies", "TV shows", "comics"],
-    "category": "Comicon",
-    "website": "https://www.fandemictour.com",
-    "social_media": {
-      "facebook": "https://www.facebook.com/FandemicTour",
-      "twitter": "https://twitter.com/FandemicTour",
-      "instagram": "https://www.instagram.com/FandemicTour",
-      "threads": "https://www.threads.net/FandemicTour",
-      "tiktok": "https://www.tiktok.com/@FandemicTour",
-      "reddit": "https://www.reddit.com/r/FandemicTour"
-    }
-  },
-  {
-    "uid": 8,
-    "name": "Fan Expo Dallas",
-    "month": "June",
-    "city": "Dallas",
-    "zip_code": "75207",
-    "description": "A large pop culture event with a wide range of activities including celebrity panels, autographs, and photo ops.",
-    "keywords": ["pop culture", "celebrity panels", "autographs", "photo ops"],
-    "category": "Comicon",
-    "website": "https://www.fanexpodallas.com",
-    "social_media": {
-      "facebook": "https://www.facebook.com/FanExpoDallas",
-      "twitter": "https://twitter.com/FanExpoDallas",
-      "instagram": "https://www.instagram.com/FanExpoDallas",
-      "threads": "https://www.threads.net/FanExpoDallas",
-      "tiktok": "https://www.tiktok.com/@FanExpoDallas",
-      "reddit": "https://www.reddit.com/r/FanExpoDallas"
+      "tiktok": "https://www.tiktok.com/@roosterteeth",
+      "reddit": null,
+      "youtube": "https://youtube.com/@roosterteeth"
     }
   },
   {
     "uid": 9,
     "name": "Greater Austin Comic Con",
-    "month": "June",
+    "month": "July",
     "city": "Austin",
     "zip_code": "78641",
     "description": "A celebration of comics, movies, TV, and gaming in Austin.",
@@ -162,12 +127,12 @@
     "category": "Comicon",
     "website": "https://www.greateraustincomiccon.com",
     "social_media": {
-      "facebook": "https://www.facebook.com/GreaterAustinComicCon",
-      "twitter": "https://twitter.com/AustinComicCon",
-      "instagram": "https://www.instagram.com/GreaterAustinComicCon",
-      "threads": "https://www.threads.net/GreaterAustinComicCon",
-      "tiktok": "https://www.tiktok.com/@GreaterAustinComicCon",
-      "reddit": "https://www.reddit.com/r/GreaterAustinComicCon"
+      "facebook": "https://www.facebook.com/greateraustincc/",
+      "twitter": "https://twitter.com/GreaterAustinCC",
+      "instagram": "https://www.instagram.com/greateraustincomiccon/",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -184,9 +149,10 @@
       "facebook": "https://www.facebook.com/ClassicGameFest",
       "twitter": "https://twitter.com/ClassicGameFest",
       "instagram": "https://www.instagram.com/ClassicGameFest",
-      "threads": "https://www.threads.net/ClassicGameFest",
-      "tiktok": "https://www.tiktok.com/@ClassicGameFest",
-      "reddit": "https://www.reddit.com/r/ClassicGameFest"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null,
+      "youtube": "https://www.youtube.com/classicgamefest"
     }
   },
   {
@@ -201,11 +167,11 @@
     "website": "https://www.southtexascomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/SouthTexasComicCon",
-      "twitter": "https://twitter.com/STXComicCon",
-      "instagram": "https://www.instagram.com/SouthTexasComicCon",
-      "threads": "https://www.threads.net/SouthTexasComicCon",
-      "tiktok": "https://www.tiktok.com/@SouthTexasComicCon",
-      "reddit": "https://www.reddit.com/r/SouthTexasComicCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -220,11 +186,11 @@
     "website": "https://www.bellcountycomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/BellCountyComicCon",
-      "twitter": "https://twitter.com/BellCountyComic",
+      "twitter": null,
       "instagram": "https://www.instagram.com/BellCountyComicCon",
-      "threads": "https://www.threads.net/BellCountyComicCon",
-      "tiktok": "https://www.tiktok.com/@BellCountyComicCon",
-      "reddit": "https://www.reddit.com/r/BellCountyComicCon"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -241,11 +207,11 @@
       "facebook": "https://www.facebook.com/WizardWorld",
       "twitter": "https://twitter.com/WizardWorld",
       "instagram": "https://www.instagram.com/WizardWorld",
-      "threads": "https://www.threads.net/WizardWorld",
+      "threads": null,
       "tiktok": "https://www.tiktok.com/@WizardWorld",
-      "reddit": "https://www.reddit.com/r/WizardWorld"
+      "reddit": null
     }
-  },
+  },      
   {
     "uid": 14,
     "name": "PAX South",
@@ -257,12 +223,12 @@
     "category": "Video Game Conference",
     "website": "https://www.paxsite.com/south",
     "social_media": {
-      "facebook": "https://www.facebook.com/PAX",
-      "twitter": "https://twitter.com/PAX",
-      "instagram": "https://www.instagram.com/PAX",
-      "threads": "https://www.threads.net/PAX",
-      "tiktok": "https://www.tiktok.com/@PAX",
-      "reddit": "https://www.reddit.com/r/PAX"
+      "facebook": "https://www.facebook.com/officialpax",
+      "twitter": "https://twitter.com/pax",
+      "instagram": "https://www.instagram.com/officialpax_",
+      "threads": null,
+      "tiktok": "https://www.tiktok.com/@pax",
+      "reddit": null
     }
   },
   {
@@ -278,10 +244,10 @@
     "social_media": {
       "facebook": "https://www.facebook.com/LetsPlayGamingExpo",
       "twitter": "https://twitter.com/LetsPlayExpo",
-      "instagram": "https://www.instagram.com/LetsPlayGamingExpo",
-      "threads": "https://www.threads.net/LetsPlayGamingExpo",
-      "tiktok": "https://www.tiktok.com/@LetsPlayGamingExpo",
-      "reddit": "https://www.reddit.com/r/LetsPlayGamingExpo"
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -298,9 +264,9 @@
       "facebook": "https://www.facebook.com/DreamHack",
       "twitter": "https://twitter.com/DreamHack",
       "instagram": "https://www.instagram.com/DreamHack",
-      "threads": "https://www.threads.net/DreamHack",
-      "tiktok": "https://www.tiktok.com/@DreamHack",
-      "reddit": "https://www.reddit.com/r/DreamHack"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -316,10 +282,10 @@
     "social_media": {
       "facebook": "https://www.facebook.com/QuakeCon",
       "twitter": "https://twitter.com/QuakeCon",
-      "instagram": "https://www.instagram.com/QuakeCon",
-      "threads": "https://www.threads.net/QuakeCon",
-      "tiktok": "https://www.tiktok.com/@QuakeCon",
-      "reddit": "https://www.reddit.com/r/QuakeCon"
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -336,9 +302,9 @@
       "facebook": "https://www.facebook.com/SXSW",
       "twitter": "https://twitter.com/SXSW",
       "instagram": "https://www.instagram.com/SXSW",
-      "threads": "https://www.threads.net/SXSW",
+      "threads": null,
       "tiktok": "https://www.tiktok.com/@SXSW",
-      "reddit": "https://www.reddit.com/r/SXSW"
+      "reddit": null
     }
   },
   {
@@ -355,9 +321,9 @@
       "facebook": "https://www.facebook.com/TexasLinuxFest",
       "twitter": "https://twitter.com/TexasLinuxFest",
       "instagram": "https://www.instagram.com/TexasLinuxFest",
-      "threads": "https://www.threads.net/TexasLinuxFest",
-      "tiktok": "https://www.tiktok.com/@TexasLinuxFest",
-      "reddit": "https://www.reddit.com/r/TexasLinuxFest"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -374,9 +340,9 @@
       "facebook": "https://www.facebook.com/TexasCyberSummit",
       "twitter": "https://twitter.com/TexasCyber",
       "instagram": "https://www.instagram.com/TexasCyberSummit",
-      "threads": "https://www.threads.net/TexasCyberSummit",
-      "tiktok": "https://www.tiktok.com/@TexasCyberSummit",
-      "reddit": "https://www.reddit.com/r/TexasCyberSummit"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -391,11 +357,11 @@
     "website": "https://www.houstontechfest.com",
     "social_media": {
       "facebook": "https://www.facebook.com/HoustonTechFest",
-      "twitter": "https://twitter.com/HouTechFest",
-      "instagram": "https://www.instagram.com/HoustonTechFest",
-      "threads": "https://www.threads.net/HoustonTechFest",
-      "tiktok": "https://www.tiktok.com/@HoustonTechFest",
-      "reddit": "https://www.reddit.com/r/HoustonTechFest"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -409,12 +375,12 @@
     "category": "Technology Summit",
     "website": "https://www.innotechconferences.com/austin",
     "social_media": {
-      "facebook": "https://www.facebook.com/InnoTechAustin",
-      "twitter": "https://twitter.com/InnoTechAustin",
-      "instagram": "https://www.instagram.com/InnoTechAustin",
-      "threads": "https://www.threads.net/InnoTechAustin",
-      "tiktok": "https://www.tiktok.com/@InnoTechAustin",
-      "reddit": "https://www.reddit.com/r/InnoTechAustin"
+      "facebook": null,
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -431,9 +397,9 @@
       "facebook": "https://www.facebook.com/A-Kon",
       "twitter": "https://twitter.com/A_Kon",
       "instagram": "https://www.instagram.com/A_Kon",
-      "threads": "https://www.threads.net/A_Kon",
-      "tiktok": "https://www.tiktok.com/@A_Kon",
-      "reddit": "https://www.reddit.com/r/A_Kon"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -450,9 +416,9 @@
       "facebook": "https://www.facebook.com/SanJapan",
       "twitter": "https://twitter.com/SanJapan",
       "instagram": "https://www.instagram.com/SanJapan",
-      "threads": "https://www.threads.net/SanJapan",
-      "tiktok": "https://www.tiktok.com/@SanJapan",
-      "reddit": "https://www.reddit.com/r/SanJapan"
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -468,10 +434,10 @@
     "social_media": {
       "facebook": "https://www.facebook.com/AggieCon",
       "twitter": "https://twitter.com/AggieCon",
-      "instagram": "https://www.instagram.com/AggieCon",
-      "threads": "https://www.threads.net/AggieCon",
-      "tiktok": "https://www.tiktok.com/@AggieCon",
-      "reddit": "https://www.reddit.com/r/AggieCon"
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -486,11 +452,11 @@
     "website": "https://www.centraltexascomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/CentralTexasComicCon",
-      "twitter": "https://twitter.com/CentralTXComic",
-      "instagram": "https://www.instagram.com/CentralTexasComicCon",
-      "threads": "https://www.threads.net/CentralTexasComicCon",
-      "tiktok": "https://www.tiktok.com/@CentralTexasComicCon",
-      "reddit": "https://www.reddit.com/r/CentralTexasComicCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -505,11 +471,11 @@
     "website": "https://www.easttexascomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/EastTexasComicCon",
-      "twitter": "https://twitter.com/EastTXComicCon",
-      "instagram": "https://www.instagram.com/EastTexasComicCon",
-      "threads": "https://www.threads.net/EastTexasComicCon",
-      "tiktok": "https://www.tiktok.com/@EastTexasComicCon",
-      "reddit": "https://www.reddit.com/r/EastTexasComicCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -524,11 +490,11 @@
     "website": "https://www.westtexascomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/WestTexasComicCon",
-      "twitter": "https://twitter.com/WestTXComicCon",
-      "instagram": "https://www.instagram.com/WestTexasComicCon",
-      "threads": "https://www.threads.net/WestTexasComicCon",
-      "tiktok": "https://www.tiktok.com/@WestTexasComicCon",
-      "reddit": "https://www.reddit.com/r/WestTexasComicCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -543,11 +509,11 @@
     "website": "https://www.hillcountrycomicon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/HillCountryComicon",
-      "twitter": "https://twitter.com/HillCountryComic",
-      "instagram": "https://www.instagram.com/HillCountryComicon",
-      "threads": "https://www.threads.net/HillCountryComicon",
-      "tiktok": "https://www.tiktok.com/@HillCountryComicon",
-      "reddit": "https://www.reddit.com/r/HillCountryComicon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -563,10 +529,10 @@
     "social_media": {
       "facebook": "https://www.facebook.com/ElPasoComicCon",
       "twitter": "https://twitter.com/ElPasoComicCon",
-      "instagram": "https://www.instagram.com/ElPasoComicCon",
-      "threads": "https://www.threads.net/ElPasoComicCon",
-      "tiktok": "https://www.tiktok.com/@ElPasoComicCon",
-      "reddit": "https://www.reddit.com/r/ElPasoComicCon"
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -581,11 +547,11 @@
     "website": "https://www.southtexascomiccon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/SouthTexasComicCon",
-      "twitter": "https://twitter.com/STXComicCon",
-      "instagram": "https://www.instagram.com/SouthTexasComicCon",
-      "threads": "https://www.threads.net/SouthTexasComicCon",
-      "tiktok": "https://www.tiktok.com/@SouthTexasComicCon",
-      "reddit": "https://www.reddit.com/r/SouthTexasComicCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -600,11 +566,11 @@
     "website": "https://www.houstontechfest.com",
     "social_media": {
       "facebook": "https://www.facebook.com/HoustonTechFest",
-      "twitter": "https://twitter.com/HouTechFest",
-      "instagram": "https://www.instagram.com/HoustonTechFest",
-      "threads": "https://www.threads.net/HoustonTechFest",
-      "tiktok": "https://www.tiktok.com/@HoustonTechFest",
-      "reddit": "https://www.reddit.com/r/HoustonTechFest"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -619,11 +585,11 @@
     "website": "https://www.animecorpuschristi.com",
     "social_media": {
       "facebook": "https://www.facebook.com/AnimeCorpusChristi",
-      "twitter": "https://twitter.com/AnimeCC",
-      "instagram": "https://www.instagram.com/AnimeCorpusChristi",
-      "threads": "https://www.threads.net/AnimeCorpusChristi",
-      "tiktok": "https://www.tiktok.com/@AnimeCorpusChristi",
-      "reddit": "https://www.reddit.com/r/AnimeCorpusChristi"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -637,12 +603,12 @@
     "category": "Comicon",
     "website": "https://www.galaxycon.com/austin",
     "social_media": {
-      "facebook": "https://www.facebook.com/GalaxyConAustin",
-      "twitter": "https://twitter.com/GalaxyConAustin",
-      "instagram": "https://www.instagram.com/GalaxyConAustin",
-      "threads": "https://www.threads.net/GalaxyConAustin",
-      "tiktok": "https://www.tiktok.com/@GalaxyConAustin",
-      "reddit": "https://www.reddit.com/r/GalaxyConAustin"
+      "facebook": "https://www.facebook.com/GalaxyConLive",
+      "twitter": null,
+      "instagram": "https://www.instagram.com/galaxyconlive",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -657,11 +623,11 @@
     "website": "https://www.bigtexascomicon.com",
     "social_media": {
       "facebook": "https://www.facebook.com/BigTexasComicon",
-      "twitter": "https://twitter.com/BigTexasComicon",
-      "instagram": "https://www.instagram.com/BigTexasComicon",
-      "threads": "https://www.threads.net/BigTexasComicon",
-      "tiktok": "https://www.tiktok.com/@BigTexasComicon",
-      "reddit": "https://www.reddit.com/r/BigTexasComicon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
   },
   {
@@ -676,11 +642,30 @@
     "website": "https://www.oni-con.net",
     "social_media": {
       "facebook": "https://www.facebook.com/OniCon",
-      "twitter": "https://twitter.com/OniCon",
-      "instagram": "https://www.instagram.com/OniCon",
-      "threads": "https://www.threads.net/OniCon",
-      "tiktok": "https://www.tiktok.com/@OniCon",
-      "reddit": "https://www.reddit.com/r/OniCon"
+      "twitter": null,
+      "instagram": null,
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
     }
-  }    
+  },
+  {
+    "uid": 38,
+    "name": "Retro Expo",
+    "month": "November",
+    "city": "Plano",
+    "zip_code": "75074",
+    "description": "A convention celebrating all things retro, including toys, comics, video games, and pop culture memorabilia.",
+    "keywords": ["retro", "toys", "comics", "video games", "pop culture"],
+    "category": "Comicon",
+    "website": "https://www.retroexpo.com",
+    "social_media": {
+      "facebook": "https://www.facebook.com/retroexpodallas",
+      "twitter": null,
+      "instagram": "https://www.instagram.com/retroexpo_plano",
+      "threads": null,
+      "tiktok": null,
+      "reddit": null
+    }
+  }  
 ]
