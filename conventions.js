@@ -97,23 +97,41 @@ document.addEventListener('DOMContentLoaded', function () {
             box.innerHTML = `
                 <em>${item.category}</em>
                 <h2>${item.name}</h2>
-                <h3>${item.city}, ${item.zip_code}</h3>
+                <h3>${item.city}, TX ${item.zip_code}</h3>
+                <p>Usually in ${item.month}</p>
                 <p>${item.description}</p>
                 <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
                 <span>
                     <h3>Socials</h3>
                     <social>
-                        <a href="${item.social_media.instagram}" target="_blank">Instagram</a>
-                        <a href="${item.social_media.threads}" target="_blank">Threads</a>
-                        <a href="${item.social_media.facebook}" target="_blank">Facebook</a>
-                        <a href="${item.social_media.twitter}" target="_blank">Twitter</a>
-                        <a href="${item.website}" target="_blank">Website</a>
+                        <a href="${addUTMParams(item.social_media.instagram, 'instagram')}" target="_blank">Instagram</a>
+                        <a href="${addUTMParams(item.social_media.threads, 'threads')}" target="_blank">Threads</a>
+                        <a href="${addUTMParams(item.social_media.facebook, 'facebook')}" target="_blank">Facebook</a>
+                        <a href="${addUTMParams(item.social_media.twitter, 'twitter')}" target="_blank">Twitter</a>
+                        <a href="${addUTMParams(item.website, 'website')}" target="_blank">Website</a>
                     </social>
                 </span>
             `;
 
             contentContainer.appendChild(box);
         });
+    }
+
+    function addUTMParams(url, content) {
+        const utmSource = 'texascomicon';
+        const utmMedium = 'website';
+        const utmCampaign = 'comicon_event';
+        const utmContent = content;
+
+        const params = new URLSearchParams({
+            utm_source: utmSource,
+            utm_medium: utmMedium,
+            utm_campaign: utmCampaign,
+            utm_content: utmContent
+        });
+
+        const separator = url.includes('?') ? '&' : '?';
+        return `${url}${separator}${params.toString()}`;
     }
 
     function updateResultCount(count) {
