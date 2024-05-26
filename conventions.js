@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contentContainer = document.getElementById('content');
     const resultCountElement = document.getElementById('resultCount');
     const noResultsMessage = document.getElementById('noResultsMessage');
-    const toggleKeywordsButton = document.createElement('button');
+    const toggleKeywordsButton = document.getElementById('toggleKeywords');
 
     let selectedCategories = new Set();
     let selectedKeywords = new Set();
@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    toggleKeywordsButton.className = 'toggle-button';
-    toggleKeywordsButton.textContent = '⯆';
     toggleKeywordsButton.addEventListener('click', () => {
         keywordsExpanded = !keywordsExpanded;
         toggleKeywordsButton.textContent = keywordsExpanded ? '⯅' : '⯆';
@@ -37,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const sortedKeywords = Object.keys(keywordFrequency).sort((a, b) => keywordFrequency[b] - keywordFrequency[a]);
         addSelectors(sortedKeywords, keywordContainer, selectedKeywords);
     });
-
-    keywordContainer.appendChild(toggleKeywordsButton);
 
     function populateFilters(data) {
         const categories = new Set();
