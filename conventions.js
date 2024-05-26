@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     toggleKeywordsButton.addEventListener('click', () => {
         keywordsExpanded = !keywordsExpanded;
-        toggleKeywordsButton.textContent = keywordsExpanded ? '⯅' : '⯆';
+        toggleKeywordsButton.textContent = keywordsExpanded ? '>>' : '>>';
         const keywordFrequency = getKeywordFrequency();
         const sortedKeywords = Object.keys(keywordFrequency).sort((a, b) => keywordFrequency[b] - keywordFrequency[a]);
         addSelectors(sortedKeywords, keywordContainer, selectedKeywords);
