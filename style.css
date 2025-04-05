@@ -163,6 +163,7 @@ social.flexContainer {
   display: flex;
   flex-wrap: wrap;
   padding: 2%;
+  margin: 0 auto;
 }
 .box {
   border: 1px solid #ccc;
