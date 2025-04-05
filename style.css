@@ -159,18 +159,17 @@ button {
 }
 
 /* Social Links */
-.box social a {
-  display: block;
-  margin: 8px auto;
-  padding: 2%;
-  width: 40%;
-}
-social {
+social.flexContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
   align-items: center; 
   margin: 2% auto; 
+}
+.box social a {
+  display: block;
+  margin: 8px auto;
+  padding: 2%;
 }
 
 
