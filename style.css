@@ -48,20 +48,6 @@ img.icon {
   transition: width 0.5s ease-in-out;
 }
 
-textarea {
-  min-width: -webkit-fill-available;
-  height: 180px;
-  margin: 2em auto;
-  font-family: inherit;
-  flex: 1 1 300px;
-  border: none;
-  border-radius: 1em;
-  padding: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-input[type="range"] {
-  width: auto;
-}
 h3.inputLabel {
   display: inline-block;
   margin: 1em;
@@ -180,7 +166,7 @@ social.flexContainer {
 }
 .box {
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 20px 20px 0;
   margin: 10px;
   flex: 1 1 300px;
 }
@@ -238,23 +224,6 @@ social.flexContainer {
 
 
 @media only screen and (max-width: 768px) {
-.flexContainer {
-    flex-direction: column;
-    margin: auto;
-}
-textarea {
-  min-width: -webkit-fill-available;
-  height: 180px;
-  flex: 1 1 300px;
-  border-radius: 1em;
-  margin: 0 auto;
-  padding: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-input[type="range"] {
-  width: auto;
-}
-
 button {
   display: block;
   margin: 1em;
