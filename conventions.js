@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
                 <span>
                     <h3>Socials</h3>
-                    <social>
+                    <social class="flexContainer">
                         ${socialLinks}
                     </social>
                 </span>

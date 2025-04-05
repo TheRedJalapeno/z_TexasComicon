@@ -4,7 +4,11 @@ p {font-size: auto;}
 h1 {font-size: 2em;}
 h2 {font-size: 1.45em;}
 h3 {font-size: 1.25em;}
-
+h1,h2,h3 {
+  font-weight: bold;
+  color: #1e3d59; /* Dark blue for headers */
+  margin: 15px 0 5px;
+}
 
   
 body {
@@ -112,7 +116,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin: 3em;
-  padding: 20px;
 }
 .box {
   flex: 1 1 300px;
@@ -154,13 +157,27 @@ button {
   background-color: #f0f0f0;
   border-radius: 3px;
 }
+
+/* Social Links */
 .box social a {
   display: block;
+  margin: 8px auto;
+  padding: 2%;
+  width: 40%;
 }
+social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+  margin: 2% auto; 
+}
+
 
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
+  padding: 2%;
 }
 .box {
   border: 1px solid #ccc;
@@ -174,9 +191,6 @@ button {
   padding: 2px 5px;
   background-color: #f0f0f0;
   border-radius: 3px;
-}
-.box social a {
-  display: block;
 }
 .selectorContainer {
   border: 1px solid #ccc;
@@ -229,15 +243,6 @@ button {
     flex-direction: column;
     margin: auto;
 }
-body {
-  color: #333;
-  padding: 20px;
-}
-#mainContainer {
-  width: 95%;
-  max-width: 95%;
-  margin: 0 auto;
-}
 textarea {
   min-width: -webkit-fill-available;
   height: 180px;
@@ -284,38 +289,13 @@ button {
 /* Footer styles */
 #footer {
   background-color: #1e3d59;
-  color: white;
+  color: #ccc;
   padding: 40px 0 20px;
 }
-
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
 .footer-section h3 {
   margin-bottom: 15px;
   font-size: 1.2rem;
 }
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
 .copyright {
   text-align: center;
   margin-top: 30px;
