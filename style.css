@@ -107,9 +107,10 @@ button {
   flex: 1 1 300px;
   border-radius: 1em;
   margin: 1em;
-  padding: 2em;
+  padding: 20px 20px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc; 
 }
 .box .containerIcon {
   width: 4em;
@@ -164,12 +165,6 @@ social.flexContainer {
   flex-wrap: wrap;
   padding: 2%;
   margin: 0 auto;
-}
-.box {
-  border: 1px solid #ccc;
-  padding: 20px 20px 0;
-  margin: 10px;
-  flex: 1 1 300px;
 }
 .box keyword {
   display: inline-block;
