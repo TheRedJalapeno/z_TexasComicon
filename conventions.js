@@ -94,26 +94,30 @@ document.addEventListener('DOMContentLoaded', function () {
             const box = document.createElement('div');
             box.className = 'box';
 
+            // Make sure social_media exists to avoid errors
+            const socialMedia = item.social_media || {};
+            
             const socialLinks = [
-                { url: item.social_media.instagram, name: 'Instagram' },
-                { url: item.social_media.threads, name: 'Threads' },
-                { url: item.social_media.facebook, name: 'Facebook' },
-                { url: item.social_media.twitter, name: 'Twitter' },
-                { url: item.social_media.reddit, name: 'Reddit' },
-                { url: item.social_media.tiktok, name: 'Tiktok' },
-                { url: item.social_media.youtube, name: 'YouTube' },
+                { url: socialMedia.instagram, name: 'Instagram' },
+                { url: socialMedia.threads, name: 'Threads' },
+                { url: socialMedia.facebook, name: 'Facebook' },
+                { url: socialMedia.twitter, name: 'Twitter' },
+                { url: socialMedia.reddit, name: 'Reddit' },
+                { url: socialMedia.tiktok, name: 'Tiktok' },
+                { url: socialMedia.youtube, name: 'YouTube' },
                 { url: item.website, name: 'Website' }
-            ].filter(link => link.url !== null).map(link => 
+            ].filter(link => link.url && typeof link.url === 'string' && link.url.trim() !== '')
+            .map(link => 
                 `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank">${link.name}</a>`
             ).join('<br>');
 
             box.innerHTML = `
                 <em class="event_category">${item.category}</em>
                 <h2 class="event_name">${item.name}</h2>
-                <h3 class="event_location">${item.city}, TX ${item.zip_code}</h3>
+                <h3 class="event_location">${item.city}, TX ${item.zip_code || ''}</h3>
                 <p class="event_month">Usually in ${item.month}</p>
-                <p class="event_desc">${item.description}</p>
-                <span class="event_keywords">${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
+                <p class="event_desc">${item.description || ''}</p>
+                <span class="event_keywords">${(item.keywords || []).map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
                 <span class="event_socials">
                     <h3>Socials</h3>
                     <social class="flexContainer">
@@ -127,20 +131,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addUTMParams(url, content) {
-        const utmSource = 'texascomicon';
-        const utmMedium = 'website';
-        const utmCampaign = 'comicon_event';
-        const utmContent = content;
+        // Safety check to ensure url is valid
+        if (!url || typeof url !== 'string') {
+            return '#'; // Return a safe default
+        }
 
-        const params = new URLSearchParams({
-            utm_source: utmSource,
-            utm_medium: utmMedium,
-            utm_campaign: utmCampaign,
-            utm_content: utmContent
-        });
+        try {
+            const utmSource = 'texascomicon';
+            const utmMedium = 'website';
+            const utmCampaign = 'comicon_event';
+            const utmContent = content;
 
-        const separator = url.includes('?') ? '&' : '?';
-        return `${url}${separator}${params.toString()}`;
+            const params = new URLSearchParams({
+                utm_source: utmSource,
+                utm_medium: utmMedium,
+                utm_campaign: utmCampaign,
+                utm_content: utmContent
+            });
+
+            const separator = url.includes('?') ? '&' : '?';
+            return `${url}${separator}${params.toString()}`;
+        } catch (error) {
+            console.error('Error adding UTM parameters:', error);
+            return url; // Return original URL if there's an error
+        }
     }
 
     function updateResultCount(count) {
