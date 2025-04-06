@@ -125,6 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     </social>
                 </span>
             `;
+            // Add the data-uid attribute to the box
+            box.dataset.uid = item.uid;
 
             contentContainer.appendChild(box);
         });
