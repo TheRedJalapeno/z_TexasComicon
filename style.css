@@ -98,15 +98,24 @@ button {
 .header {
   padding: 20px;
 }
+.subtitle {
+  font-size: 1em;
+  color: #555; /* Lighter color for subtitle */
+  text-align: center;
+  margin: 10px auto;
+  max-width: 900px;
+  display: block;
+}
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
-  margin: 3em;
+  padding: 0 2% 2%;
+  margin: 0 auto;
 }
 .box {
   flex: 1 1 300px;
   border-radius: 1em;
-  margin: 1em;
+  margin: 1%;
   padding: 20px 20px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: rgba(255, 255, 255, 0.9);
@@ -137,48 +146,61 @@ button {
   box-shadow: none;
 }
 
+em.event_category {
+  display: none;
+}
+h2.event_name {
+  margin: 0 0 5px;
+}
+h3.event_location {
+  font-size: small;
+  color: lightslategray;
+  margin-top: 0;
+  font-weight: 500;
+}
+p.event_month {
+  font-size: small;
+  color: lightslategray;
+  margin: 5px 0;
+}
+
+
 .box keyword {
   display: inline-block;
   margin-right: 5px;
   padding: 2px 5px;
   background-color: #f0f0f0;
   border-radius: 3px;
+  font-size: .8em;
+  font-style: italic;
+  color: lightslategray;
 }
 
 /* Social Links */
+.event_socials h3 {
+  display: none;
+}
 social.flexContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
-  align-items: center; 
-  margin: 2% auto; 
+  justify-content: left; 
+  margin: 10px auto; 
+  padding: 0;
 }
 .box social a {
   display: block;
-  margin: 5px 9px;
-  padding: 2%;
+  margin: 5px;
+  padding: 7px;
   background-color: azure;
   border: 1px solid lightsteelblue;
   border-radius: 8px;
   text-decoration: none;
   color: cadetblue;
   font-weight: 700;
+  font-size: .8em;
 }
 
 
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2%;
-  margin: 0 auto;
-}
-.box keyword {
-  display: inline-block;
-  margin-right: 5px;
-  padding: 2px 5px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
 .selectorContainer {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -204,6 +226,7 @@ social.flexContainer {
   background-color: rgba(255, 255, 255, 0.9); /* Make result count slightly transparent */
   padding: 10px;
   border-radius: 5px;
+  max-width: 150px;
 }
 #noResultsMessage {
   font-size: 1.2em;
@@ -287,5 +310,10 @@ div.container {
   padding: 20px;
     background: white;
     border-radius: 20px;
+    display: block;
+    margin:auto;
   }
-
+img.referral_badge {
+  width: auto;
+  height: 30px;
+}

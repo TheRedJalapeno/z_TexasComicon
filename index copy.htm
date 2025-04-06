@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!----><meta property="og:url" content="https://texascomicon.com/">
-
-<!----><title>Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments</title>
-<!----><meta property="og:title" content="Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments">
-<!----><meta name="twitter:title" content="Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments">
-
-<!----><meta name="description" content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene."/>
-<!----><meta property="og:description" content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene."/>
-<!----><meta name="twitter:description" content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene."/>
-
-<!----><meta name="keywords" content="Texas, Comic Con, Convention, Events, Tournaments, Gaming, Anime, Cosplay, Pop Culture, Fandom, Meetups, Artists, Vendors, Panels, Workshops, Texas Conventions, Texas Events, Texas Tournaments"/>
+  <!---->
+  <meta property="og:url" content="https://texascomicon.com/">
+  <title>Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments</title>
+  <meta property="og:title" content="Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments">
+  <meta name="twitter:title" content="Texas Comicon - Your Guide to Texas Conventions, Events, and Tournaments">
+  <meta name="description"
+    content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene." />
+  <meta property="og:description"
+    content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene." />
+  <meta name="twitter:description"
+    content="Find Texas comic conventions, gaming events, anime meetups, and more! Your comprehensive guide to the Lone Star State's pop culture scene." />
+  <meta name="keywords"
+    content="Texas, Comic Con, Convention, Events, Tournaments, Gaming, Anime, Cosplay, Pop Culture, Fandom, Meetups, Artists, Vendors, Panels, Workshops, Texas Conventions, Texas Events, Texas Tournaments" />
+  <!---->
 
   <meta name="author" content="ZingLab">
   <meta name="robots" content="index, follow">
@@ -27,92 +31,1026 @@
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="mainContainer">
-      <div class="header">
-        <img class="icon" src="texas.png">
-        <h1 class="title">Texas Comicon</h1>
-        <sub>Your best resource for all Texas conventions, events, tournaments, and more.</sub>
-      </div>
-      
-      <div class="flexContainer">
-        <div class="boxLarge">
-          <h3 class="inputLabel">What are you looking for?</h3>
-          <div id="resultCount">Results: 0</div>
-          <div id="noResultsMessage">No results found. Please adjust your filters.</div>
-          <div id="categoryContainer" class="selectorContainer"></div>
-          <div id="keywordContainer" class="selectorContainer">
-            <button class="toggle-button" id="toggleKeywords">>></button>
-          </div>
-          <div id="cityContainer" class="selectorContainer"></div>
-          <div id="monthContainer" class="selectorContainer"></div>
-          <div id="content" class="flexContainer"></div>
-          
-        </div>
-      </div>
+  <div class="mainContainer">
+    <div class="header">
+      <img class="icon" src="texas.png">
+      <h1 class="title">Texas Comicon</h1>
+      <subheader class="subtitle">
+        Texas Comicon is your one-stop destination for all comic conventions, pop culture festivals, and fan gatherings
+        across the Lone Star State. From anime meetups in Austin to massive comic expos in Dallas, we've curated every
+        cosplay opportunity, celebrity signing, and gaming tournament throughout Texas. Never miss another comic con,
+        anime festival, or gaming event! Our comprehensive filters help you find exactly what you're looking for—whether
+        it's sci-fi celebrations, cosplay competitions, or where to meet your favorite artists and actors. Connect
+        directly with event organizers through their official websites and social media.
+      </subheader>
     </div>
 
+    <!-- ----- ----- Main Container ----- ----- -->
+    <div class="flexContainer">
+      <div class="boxLarge">
+        <div id="resultCount">Results: 0</div>
+        <div id="noResultsMessage">No results found. Please adjust your filters.</div>
+        <div id="categoryContainer" class="selectorContainer"><span class="selectorItem">Comicon</span><span
+            class="selectorItem">Technology Summit</span><span class="selectorItem">Video Game Conference</span></div>
+        <div id="keywordContainer" class="selectorContainer">
+          <span class="selectorItem">pop culture</span><span class="selectorItem">comics</span><span
+            class="selectorItem">gaming</span><span class="selectorItem">anime</span><span
+            class="selectorItem">cosplay</span><span class="selectorItem">technology</span><span
+            class="selectorItem">movies</span><span class="selectorItem">celebrity guests</span><span
+            class="selectorItem">panels</span><span class="selectorItem">tournaments</span><span class="selectorItem">TV
+            shows</span><span class="selectorItem">sci-fi</span><span class="selectorItem">Japanese pop
+            culture</span><span class="selectorItem">music</span><span class="selectorItem">family-friendly</span><span
+            class="selectorItem">software development</span><span
+            class="selectorItem">horror</span><span class="selectorItem">internet culture</span><span
+            class="selectorItem">TV</span><span class="selectorItem">retro gaming</span><span
+            class="selectorItem">exhibitors</span><span class="selectorItem">free play arcades</span><span
+            class="selectorItem">entertainment</span><span
+            class="selectorItem">free play</span><span class="selectorItem">digital festival</span><span
+            class="selectorItem">esports</span><span class="selectorItem">live music concerts</span><span
+            class="selectorItem">LAN party</span><span class="selectorItem">interactive media</span><span
+            class="selectorItem">Linux</span><span class="selectorItem">open source software</span><span
+            class="selectorItem">cybersecurity</span><span class="selectorItem">business</span><span
+            class="selectorItem">fantasy</span><span
+            class="selectorItem">toys</span>
+        </div>
+        <div id="cityContainer" class="selectorContainer">
+          <span class="selectorItem">Austin</span><span class="selectorItem">Belton</span><span
+            class="selectorItem">College Station</span><span class="selectorItem">Corpus Christi</span><span
+            class="selectorItem">Dallas</span><span class="selectorItem">El Paso</span><span
+            class="selectorItem">Galveston</span><span class="selectorItem">Grapevine</span><span
+            class="selectorItem">Houston</span><span class="selectorItem">Irving</span><span
+            class="selectorItem">Longview</span><span class="selectorItem">Lubbock</span><span
+            class="selectorItem">McAllen</span><span class="selectorItem">New Braunfels</span><span
+            class="selectorItem">Plano</span><span class="selectorItem">San Antonio</span><span
+            class="selectorItem">Waco</span>
+        </div>
+        <div id="monthContainer" class="selectorContainer">
+          <span class="selectorItem">January</span><span class="selectorItem">February</span><span
+            class="selectorItem">March</span><span class="selectorItem">April</span><span
+            class="selectorItem">May</span><span class="selectorItem">June</span><span
+            class="selectorItem">July</span><span class="selectorItem">August</span><span
+            class="selectorItem">September</span><span class="selectorItem">October</span><span
+            class="selectorItem">November</span><span class="selectorItem">December</span>
+        </div>
 
-    <div class="container">
-      <div id="mc_embed_shell">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+        <!-- ----- ----- Content ----- ----- -->
+        <!-- ----- ----- Content ----- ----- -->
+        <!-- ----- ----- Content ----- ----- -->
+        <div id="content" class="flexContainer">
+          <div class="box" data-uid="1">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Fan Expo Dallas</h2>
+            <h3 class="event_location">Dallas, TX 75207</h3>
+            <p class="event_month">Usually in October</p>
+            <p class="event_desc">A pop culture event featuring comics, movies, TV shows, and celebrity guests.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>movies</keyword>
+              <keyword>TV shows</keyword>
+              <keyword>celebrity guests</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/FANEXPODallas?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.threads.net/FANEXPODallas?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=threads"
+                  target="_blank">Threads</a><br><a
+                  href="https://www.facebook.com/FANEXPODallas/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/FANEXPODallas/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.tiktok.com/@fanexpohq/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=tiktok"
+                  target="_blank">Tiktok</a><br><a
+                  href="https://www.youtube.com/channel/UCEOrTO8A5Nq9oQ1NbvLUxrg/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=youtube"
+                  target="_blank">YouTube</a><br><a
+                  href="https://www.dallasfanfestival.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="2">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Comicpalooza</h2>
+            <h3 class="event_location">Houston, TX 77010</h3>
+            <p class="event_month">Usually in May</p>
+            <p class="event_desc">One of the largest pop culture conventions in Texas, covering comics, sci-fi, anime,
+              and gaming.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>sci-fi</keyword>
+              <keyword>anime</keyword>
+              <keyword>gaming</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/Comicpalooza?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://twitter.com/Comicpalooza?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.comicpalooza.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="3">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Alamo City Comic Con</h2>
+            <h3 class="event_location">San Antonio, TX 78205</h3>
+            <p class="event_month">Usually in October</p>
+            <p class="event_desc">Focuses on comics, movies, TV shows, and pop culture with various celebrity guests.
+            </p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>movies</keyword>
+              <keyword>TV shows</keyword>
+              <keyword>celebrity guests</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/alamocitycomiccon/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/alamocitycomiccon/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/AlamoCityCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.alamocitycomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="4">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Texas Frightmare Weekend</h2>
+            <h3 class="event_location">Dallas, TX 75261</h3>
+            <p class="event_month">Usually in May</p>
+            <p class="event_desc">A horror convention that includes celebrity guests, panels, and screenings.</p>
+            <span class="event_keywords">
+              <keyword>horror</keyword>
+              <keyword>celebrity guests</keyword>
+              <keyword>panels</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/texasfrightmareweekend/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/texasfrightmareweekend?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.youtube.com/@texasfrightmareweekendofficial?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=youtube"
+                  target="_blank">YouTube</a><br><a
+                  href="https://www.texasfrightmareweekend.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="5">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Anime Matsuri</h2>
+            <h3 class="event_location">Houston, TX 77010</h3>
+            <p class="event_month">Usually in July</p>
+            <p class="event_desc">A large anime and Japanese pop culture convention with cosplay, gaming, and music.</p>
+            <span class="event_keywords">
+              <keyword>anime</keyword>
+              <keyword>Japanese pop culture</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>gaming</keyword>
+              <keyword>music</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/animematsuri/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.animematsuri.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="6">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">RTX Austin</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in July</p>
+            <p class="event_desc">A convention for fans of Rooster Teeth, gaming, and internet culture.</p>
+            <span class="event_keywords">
+              <keyword>gaming</keyword>
+              <keyword>internet culture</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/roosterteeth?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/roosterteeth?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/roosterteeth?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.tiktok.com/@roosterteeth?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=tiktok"
+                  target="_blank">Tiktok</a><br><a
+                  href="https://youtube.com/@roosterteeth?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=youtube"
+                  target="_blank">YouTube</a><br><a
+                  href="https://www.rtxaustin.com/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="9">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Greater Austin Comic Con</h2>
+            <h3 class="event_location">Austin, TX 78641</h3>
+            <p class="event_month">Usually in July</p>
+            <p class="event_desc">A celebration of comics, movies, TV, and gaming in Austin.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>movies</keyword>
+              <keyword>TV</keyword>
+              <keyword>gaming</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/greateraustincomiccon/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/greateraustincc/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/GreaterAustinCC?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.greateraustincomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="10">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">Classic Game Fest</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in July</p>
+            <p class="event_desc">Focused on retro gaming with exhibitors, free play arcades, and tournaments.</p>
+            <span class="event_keywords">
+              <keyword>retro gaming</keyword>
+              <keyword>exhibitors</keyword>
+              <keyword>free play arcades</keyword>
+              <keyword>tournaments</keyword>
+              <keyword>gaming</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/ClassicGameFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/ClassicGameFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/ClassicGameFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.youtube.com/classicgamefest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=youtube"
+                  target="_blank">YouTube</a><br><a
+                  href="https://www.classicgamefest.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="11">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">South Texas Comic Con</h2>
+            <h3 class="event_location">McAllen, TX 78501</h3>
+            <p class="event_month">Usually in April</p>
+            <p class="event_desc">Features comics, anime, gaming, and pop culture with various activities and guests.
+            </p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>anime</keyword>
+              <keyword>gaming</keyword>
+              <keyword>pop culture</keyword>
+              <keyword>activities</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/SouthTexasComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.southtexascomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="12">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Bell County Comic Con</h2>
+            <h3 class="event_location">Belton, TX 76513</h3>
+            <p class="event_month">Usually in August</p>
+            <p class="event_desc">A family-friendly event with a focus on comics, cosplay, and pop culture.</p>
+            <span class="event_keywords">
+              <keyword>family-friendly</keyword>
+              <keyword>comics</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/BellCountyComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/BellCountyComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.bellcountycomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="13">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Wizard World Austin</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in November</p>
+            <p class="event_desc">Part of the Wizard World convention series, featuring pop culture and entertainment.
+            </p>
+            <span class="event_keywords">
+              <keyword>pop culture</keyword>
+              <keyword>entertainment</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/WizardWorld?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/WizardWorld?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/WizardWorld?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.tiktok.com/@WizardWorld?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=tiktok"
+                  target="_blank">Tiktok</a><br><a
+                  href="https://www.wizardworld.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="14">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">PAX South</h2>
+            <h3 class="event_location">San Antonio, TX 78205</h3>
+            <p class="event_month">Usually in January</p>
+            <p class="event_desc">A gaming festival that includes panels, tournaments, and showcases from game
+              developers.</p>
+            <span class="event_keywords">
+              <keyword>gaming</keyword>
+              <keyword>panels</keyword>
+              <keyword>tournaments</keyword>
+              <keyword>development</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/officialpax_?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/officialpax?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/pax?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.tiktok.com/@pax?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=tiktok"
+                  target="_blank">Tiktok</a><br><a
+                  href="https://www.paxsite.com/south?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="15">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">Let's Play Gaming Expo</h2>
+            <h3 class="event_location">Irving, TX 75039</h3>
+            <p class="event_month">Usually in August</p>
+            <p class="event_desc">A convention focused on gaming with free play areas, tournaments, and vendor booths.
+            </p>
+            <span class="event_keywords">
+              <keyword>gaming</keyword>
+              <keyword>free play</keyword>
+              <keyword>tournaments</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/LetsPlayGamingExpo?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/LetsPlayExpo?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.letsplaygamingexpo.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="16">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">DreamHack Dallas</h2>
+            <h3 class="event_location">Dallas, TX 75207</h3>
+            <p class="event_month">Usually in June</p>
+            <p class="event_desc">A digital festival that includes esports, live music, and technology exhibits.</p>
+            <span class="event_keywords">
+              <keyword>esports</keyword>
+              <keyword>live music concerts</keyword>
+              <keyword>technology</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/DreamHack?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/DreamHack?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/DreamHack?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.dreamhack.com/dallas?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="17">
+            <em class="event_category">Video Game Conference</em>
+            <h2 class="event_name">QuakeCon</h2>
+            <h3 class="event_location">Grapevine, TX 76051</h3>
+            <p class="event_month">Usually in August</p>
+            <p class="event_desc">A large LAN party and gaming festival featuring tournaments and panels.</p>
+            <span class="event_keywords">
+              <keyword>LAN party</keyword>
+              <keyword>gaming</keyword>
+              <keyword>tournaments</keyword>
+              <keyword>panels</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/QuakeCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/QuakeCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.quakecon.org?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="18">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">SXSW</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in March</p>
+            <p class="event_desc">A major conference and festival encompassing music, film, and interactive media.</p>
+            <span class="event_keywords">
+              <keyword>music</keyword>
+              <keyword>movies</keyword>
+              <keyword>interactive media</keyword>
+              <keyword>technology</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/SXSW?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/SXSW?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/SXSW?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.tiktok.com/@SXSW?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=tiktok"
+                  target="_blank">Tiktok</a><br><a
+                  href="https://www.sxsw.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="19">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">Texas Linux Fest</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in May</p>
+            <p class="event_desc">An annual event for Linux and open-source software enthusiasts.</p>
+            <span class="event_keywords">
+              <keyword>Linux</keyword>
+              <keyword>open source software</keyword>
+              <keyword>technology</keyword>
+              <keyword>software development</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/TexasLinuxFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/TexasLinuxFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/TexasLinuxFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.texaslinuxfest.org?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="20">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">Texas Cyber Summit</h2>
+            <h3 class="event_location">San Antonio, TX 78205</h3>
+            <p class="event_month">Usually in October</p>
+            <p class="event_desc">A cybersecurity conference with workshops, panels, and keynotes from industry leaders.
+            </p>
+            <span class="event_keywords">
+              <keyword>cybersecurity</keyword>
+              <keyword>panels</keyword>
+              <keyword>technology</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/TexasCyberSummit?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/TexasCyberSummit?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/TexasCyber?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.texascybersummit.org?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="21">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">Houston TechFest</h2>
+            <h3 class="event_location">Houston, TX 77002</h3>
+            <p class="event_month">Usually in September</p>
+            <p class="event_desc">A free technology conference with sessions on various IT and development topics.</p>
+            <span class="event_keywords">
+              <keyword>technology</keyword>
+              <keyword>software development</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/HoustonTechFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.houstontechfest.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="22">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">InnoTech Austin</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in November</p>
+            <p class="event_desc">InnoTech Austin, the Technology and Security Conference, creates an environment where education, innovation, peer-to-peer networking and the latest technology and business solutions are all available specifically for IT professionals</p>
+            <span class="event_keywords">
+              <keyword>business</keyword>
+              <keyword>technology</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.innotechconferences.com/?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="23">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">A-Kon</h2>
+            <h3 class="event_location">Dallas, TX 75207</h3>
+            <p class="event_month">Usually in June</p>
+            <p class="event_desc">One of the oldest continually running anime conventions in the U.S., featuring
+              cosplay, gaming, and more.</p>
+            <span class="event_keywords">
+              <keyword>anime</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>gaming</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/A_Kon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/A-Kon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/A_Kon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.a-kon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="24">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">San Japan</h2>
+            <h3 class="event_location">San Antonio, TX 78205</h3>
+            <p class="event_month">Usually in September</p>
+            <p class="event_desc">A large anime convention in South Texas, including panels, concerts, and cosplay.</p>
+            <span class="event_keywords">
+              <keyword>anime</keyword>
+              <keyword>panels</keyword>
+              <keyword>live music concerts</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>Japanese pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/SanJapan?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/SanJapan?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/SanJapan?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.san-japan.org?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="25">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">AggieCon</h2>
+            <h3 class="event_location">College Station, TX 77840</h3>
+            <p class="event_month">Usually in March</p>
+            <p class="event_desc">The oldest student-run science fiction convention in the U.S., covering sci-fi,
+              fantasy, and gaming.</p>
+            <span class="event_keywords">
+              <keyword>sci-fi</keyword>
+              <keyword>fantasy</keyword>
+              <keyword>gaming</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/AggieCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/AggieCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.aggiecon.org?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="26">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Central Texas Comic Con</h2>
+            <h3 class="event_location">Waco, TX 76710</h3>
+            <p class="event_month">Usually in April</p>
+            <p class="event_desc">Features comics, cosplay, and pop culture vendors.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/CentralTexasComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.centraltexascomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="27">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">East Texas Comic Con</h2>
+            <h3 class="event_location">Longview, TX 75601</h3>
+            <p class="event_month">Usually in May</p>
+            <p class="event_desc">A pop culture event celebrating comics, anime, sci-fi, and more.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>anime</keyword>
+              <keyword>sci-fi</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/EastTexasComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.easttexascomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="28">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">West Texas Comic Con</h2>
+            <h3 class="event_location">Lubbock, TX 79401</h3>
+            <p class="event_month">Usually in June</p>
+            <p class="event_desc">A major comic convention in West Texas featuring a variety of pop culture elements.
+            </p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/WestTexasComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.westtexascomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="29">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Hill Country Comicon</h2>
+            <h3 class="event_location">New Braunfels, TX 78130</h3>
+            <p class="event_month">Usually in April</p>
+            <p class="event_desc">Combines comics, cosplay, and a family-friendly environment.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>family-friendly</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/HillCountryComicon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.hillcountrycomicon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="30">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">El Paso Comic Con</h2>
+            <h3 class="event_location">El Paso, TX 79901</h3>
+            <p class="event_month">Usually in April</p>
+            <p class="event_desc">Includes various aspects of pop culture with a focus on community engagement.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/ElPasoComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://twitter.com/ElPasoComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=twitter"
+                  target="_blank">Twitter</a><br><a
+                  href="https://www.elpasocomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="31">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">South Texas Comic Con</h2>
+            <h3 class="event_location">McAllen, TX 78501</h3>
+            <p class="event_month">Usually in April</p>
+            <p class="event_desc">Premier pop-culture convention in the Rio Grande Valley with a variety of guests and
+              activities.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>anime</keyword>
+              <keyword>gaming</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/SouthTexasComicCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.southtexascomiccon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="32">
+            <em class="event_category">Technology Summit</em>
+            <h2 class="event_name">Houston TechFest</h2>
+            <h3 class="event_location">Houston, TX 77002</h3>
+            <p class="event_month">Usually in September</p>
+            <p class="event_desc">A free technology conference focusing on various IT and development topics.</p>
+            <span class="event_keywords">
+              <keyword>technology</keyword>
+              <keyword>software development</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/HoustonTechFest?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.houstontechfest.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="33">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Anime Corpus Christi</h2>
+            <h3 class="event_location">Corpus Christi, TX 78401</h3>
+            <p class="event_month">Usually in February</p>
+            <p class="event_desc">Focuses on anime and Japanese pop culture with various activities and guests.</p>
+            <span class="event_keywords">
+              <keyword>anime</keyword>
+              <keyword>Japanese pop culture</keyword>
+              <keyword>cosplay</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/AnimeCorpusChristi?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.animecorpuschristi.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="34">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">GalaxyCon Austin</h2>
+            <h3 class="event_location">Austin, TX 78701</h3>
+            <p class="event_month">Usually in August</p>
+            <p class="event_desc">A large-scale pop culture convention featuring comics, movies, TV shows, and celebrity
+              guests.</p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>movies</keyword>
+              <keyword>TV shows</keyword>
+              <keyword>celebrity guests</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/galaxyconlive?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/GalaxyConLive?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.galaxycon.com/austin?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="36">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Big Texas Comicon</h2>
+            <h3 class="event_location">San Antonio, TX 78205</h3>
+            <p class="event_month">Usually in October</p>
+            <p class="event_desc">A prominent comic convention in San Antonio with a wide range of pop culture content.
+            </p>
+            <span class="event_keywords">
+              <keyword>comics</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/BigTexasComicon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.bigtexascomicon.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="37">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Oni-Con</h2>
+            <h3 class="event_location">Galveston, TX 77550</h3>
+            <p class="event_month">Usually in October</p>
+            <p class="event_desc">An anime convention featuring various elements of Japanese culture, including cosplay
+              and gaming.</p>
+            <span class="event_keywords">
+              <keyword>anime</keyword>
+              <keyword>cosplay</keyword>
+              <keyword>gaming</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.facebook.com/OniCon?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.oni-con.net?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+          <div class="box" data-uid="38">
+            <em class="event_category">Comicon</em>
+            <h2 class="event_name">Retro Expo</h2>
+            <h3 class="event_location">Plano, TX 75074</h3>
+            <p class="event_month">Usually in November</p>
+            <p class="event_desc">A convention celebrating all things retro, including toys, comics, video games, and
+              pop culture memorabilia.</p>
+            <span class="event_keywords">
+              <keyword>retro gaming</keyword>
+              <keyword>toys</keyword>
+              <keyword>comics</keyword>
+              <keyword>gaming</keyword>
+              <keyword>pop culture</keyword>
+            </span>
+            <span class="event_socials">
+              <h3>Socials</h3>
+              <social class="flexContainer">
+                <a href="https://www.instagram.com/retroexpo_plano?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=instagram"
+                  target="_blank">Instagram</a><br><a
+                  href="https://www.facebook.com/retroexpodallas?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=facebook"
+                  target="_blank">Facebook</a><br><a
+                  href="https://www.retroexpo.com?utm_source=texascomicon&amp;utm_medium=website&amp;utm_campaign=comicon_event&amp;utm_content=website"
+                  target="_blank">Website</a>
+              </social>
+            </span>
+          </div>
+        </div>
+        <!-- ----- ----- END of Content ----- ----- -->
+
+      </div>
+    </div>
+    <!-- ----- ----- END of Main Container ----- ----- -->
+
+  </div>
+
+
+  <div class="container">
+    <div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
       </style>
       <div id="mc_embed_signup">
-          <form action="https://robertwillnow.us7.list-manage.com/subscribe/post?u=76621cda98d188f78b8c23516&amp;id=7777e06599&amp;f_id=00cae9e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-              <div id="mc_embed_signup_scroll"><h2>Claim / Add Your Listing</h2>
-                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div><div class="mc-field-group"><label for="mce-LNAME">Last Name </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div><div class="mc-field-group"><label for="mce-COMPANY">Company </label><input type="text" name="COMPANY" class=" text" id="mce-COMPANY" value=""></div>
-              <div id="mce-responses" class="clear foot">
-                  <div class="response" id="mce-error-response" style="display: none;"></div>
-                  <div class="response" id="mce-success-response" style="display: none;"></div>
-              </div>
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <form
+          action="https://robertwillnow.us7.list-manage.com/subscribe/post?u=76621cda98d188f78b8c23516&amp;id=7777e06599&amp;f_id=00cae9e4f0"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank">
+          <div id="mc_embed_signup_scroll">
+            <h2>Claim / Add Your Listing</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                  class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                id="mce-EMAIL" required="" value=""></div>
+            <div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME"
+                class=" text" id="mce-FNAME" value=""></div>
+            <div class="mc-field-group"><label for="mce-LNAME">Last Name </label><input type="text" name="LNAME"
+                class=" text" id="mce-LNAME" value=""></div>
+            <div class="mc-field-group"><label for="mce-COMPANY">Company </label><input type="text" name="COMPANY"
+                class=" text" id="mce-COMPANY" value=""></div>
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              /* real people should not fill this in and expect good things - do not remove this or risk form bot
+              signups */
               <input type="text" name="b_76621cda98d188f78b8c23516_7777e06599" tabindex="-1" value="">
-          </div>
-              <div class="optionalParent">
-                  <div class="clear foot">
-                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                      <p style="margin: 0px auto;"><a href="http://eepurl.com/i7sZJU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-                  </div>
+            </div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/i7sZJU"
+                    title="Mailchimp - email marketing made easy and fun"><span
+                      style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
+                        class="refferal_badge"
+                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                        alt="Intuit Mailchimp"
+                        style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                </p>
               </div>
+            </div>
           </div>
-      </form>
+        </form>
       </div>
-      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[6]='COMPANY';ftypes[6]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+      <script
+        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
     </div>
+  </div>
 
 
-        <!-- Footer Section -->
-        <footer id="footer">
-          <div class="container">
-              <div class="copyright">
-                  <p>&copy;
-                      <script>document.write(new Date().getFullYear())</script> ZingLab. All rights reserved.
-                  </p>
-                  <p>This site contains affiliate links. We may earn a commission on qualifying purchases.</p>
-              </div>
-          </div>
-      </footer>
-    
-
-<script src="conventions.js"></script>    
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <p>&copy;
+          <script>document.write(new Date().getFullYear())</script> ZingLab. All rights reserved.
+        </p>
+        <p>This site contains affiliate links. We may earn a commission on qualifying purchases.</p>
+      </div>
+    </div>
+  </footer>
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-60BG16T00G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-60BG16T00G');
-</script>
+  <script src="filter.js"></script>
 
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5058258078034240"
-     crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-60BG16T00G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-60BG16T00G');
+  </script>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5058258078034240"
+    crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>
