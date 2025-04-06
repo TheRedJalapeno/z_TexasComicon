@@ -100,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 { url: item.social_media.facebook, name: 'Facebook' },
                 { url: item.social_media.twitter, name: 'Twitter' },
                 { url: item.social_media.reddit, name: 'Reddit' },
+                { url: item.social_media.tiktok, name: 'Tiktok' },
+                { url: item.social_media.youtube, name: 'YouTube' },
                 { url: item.website, name: 'Website' }
             ].filter(link => link.url !== null).map(link => 
                 `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank">${link.name}</a>`
