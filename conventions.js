@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { url: item.social_media.youtube, name: 'YouTube' },
                 { url: item.website, name: 'Website' }
             ].filter(link => link.url !== null).map(link => 
-                `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank" >${link.name}</a>`
+                `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank">${link.name}</a>`
             ).join('<br>');
 
             box.innerHTML = `
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addUTMParams(url, content) {
-        const utmSource = 'texascomicon.com';
+        const utmSource = 'texascomicon';
         const utmMedium = 'website';
         const utmCampaign = 'comicon_event';
         const utmContent = content;
