@@ -104,17 +104,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 { url: item.social_media.youtube, name: 'YouTube' },
                 { url: item.website, name: 'Website' }
             ].filter(link => link.url !== null).map(link => 
-                `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank">${link.name}</a>`
+                `<a href="${addUTMParams(link.url, link.name.toLowerCase())}" target="_blank" class="${link.name}">${link.name}</a>`
             ).join('<br>');
 
             box.innerHTML = `
-                <em>${item.category}</em>
-                <h2>${item.name}</h2>
-                <h3>${item.city}, TX ${item.zip_code}</h3>
-                <p>Usually in ${item.month}</p>
-                <p>${item.description}</p>
-                <span>${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
-                <span>
+                <em class="event_category">${item.category}</em>
+                <h2 class="event_name">${item.name}</h2>
+                <h3 class="event_location">${item.city}, TX ${item.zip_code}</h3>
+                <p class="event_month">Usually in ${item.month}</p>
+                <p class="event_desc">${item.description}</p>
+                <span class="event_keywords">${item.keywords.map(keyword => `<keyword>${keyword}</keyword>`).join(' ')}</span>
+                <span class="event_socials">
                     <h3>Socials</h3>
                     <social class="flexContainer">
                         ${socialLinks}
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addUTMParams(url, content) {
-        const utmSource = 'texascomicon';
+        const utmSource = 'texascomicon.com';
         const utmMedium = 'website';
         const utmCampaign = 'comicon_event';
         const utmContent = content;

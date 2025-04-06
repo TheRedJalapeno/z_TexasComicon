@@ -155,8 +155,14 @@ social.flexContainer {
 }
 .box social a {
   display: block;
-  margin: 8px auto;
+  margin: 5px 9px;
   padding: 2%;
+  background-color: azure;
+  border: 1px solid lightsteelblue;
+  border-radius: 8px;
+  text-decoration: none;
+  color: cadetblue;
+  font-weight: 700;
 }
 
 
