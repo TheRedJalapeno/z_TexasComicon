@@ -114,7 +114,7 @@ button {
 }
 .box {
   flex: 1 1 300px;
-  border-radius: 1em;
+  border-radius: 10px;
   margin: 1%;
   padding: 20px 20px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -211,7 +211,7 @@ social.flexContainer {
 }
 .selectorItem {
   display: inline-block;
-  margin: 5px;
+  margin: 3px 0;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -223,7 +223,7 @@ social.flexContainer {
 .selectorItem.zeroResults {
   opacity: 0.1;
   cursor: not-allowed;
-  /* any other styling you want */
+  display: none;
 }
 #resultCount {
   font-weight: bold;
@@ -241,6 +241,9 @@ social.flexContainer {
   background-color: rgba(255, 255, 255, 0.9); /* Make no results message slightly transparent */
   padding: 10px;
   border-radius: 5px;
+}
+#content {
+  padding: 0;
 }
 .toggle-button {
   position: absolute;
