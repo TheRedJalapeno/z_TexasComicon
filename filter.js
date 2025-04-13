@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize filters
     initializeFilters();
     updateResultCount(allBoxes.length); // Initialize with all boxes visible
+    updateFilterAvailability(); // Initial check for filter availability
 
     function initializeFilters() {
         // Extract unique categories
@@ -79,14 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
             element.className = 'selectorItem';
             element.textContent = item;
             element.addEventListener('click', () => {
-                if (selectedSet.has(item)) {
-                    selectedSet.delete(item);
-                    element.classList.remove('selected');
-                } else {
-                    selectedSet.add(item);
-                    element.classList.add('selected');
+                // Only toggle if not zero results
+                if (!element.classList.contains('zeroResults')) {
+                    if (selectedSet.has(item)) {
+                        selectedSet.delete(item);
+                        element.classList.remove('selected');
+                    } else {
+                        selectedSet.add(item);
+                        element.classList.add('selected');
+                    }
+                    filterEvents();
                 }
-                filterEvents();
             });
             container.appendChild(element);
         });
@@ -125,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         
         updateResultCount(visibleCount);
+        updateFilterAvailability(); // Update filter availability after filtering
     }
 
     function updateResultCount(count) {
@@ -134,5 +139,129 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             noResultsMessage.style.display = 'none';
         }
+    }
+
+    // New function to update filter availability
+    function updateFilterAvailability() {
+        updateCategoryAvailability();
+        updateKeywordAvailability();
+        updateCityAvailability();
+        updateMonthAvailability();
+    }
+
+    // Helper functions to check each filter type
+    function updateCategoryAvailability() {
+        const categoryItems = categoryContainer.querySelectorAll('.selectorItem');
+        categoryItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                const category = item.textContent;
+                const wouldHaveResults = checkFilterResults('category', category);
+                
+                if (!wouldHaveResults) {
+                    item.classList.add('zeroResults');
+                } else {
+                    item.classList.remove('zeroResults');
+                }
+            }
+        });
+    }
+
+    function updateKeywordAvailability() {
+        const keywordItems = keywordContainer.querySelectorAll('.selectorItem');
+        keywordItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                const keyword = item.textContent;
+                const wouldHaveResults = checkFilterResults('keyword', keyword);
+                
+                if (!wouldHaveResults) {
+                    item.classList.add('zeroResults');
+                } else {
+                    item.classList.remove('zeroResults');
+                }
+            }
+        });
+    }
+
+    function updateCityAvailability() {
+        const cityItems = cityContainer.querySelectorAll('.selectorItem');
+        cityItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                const city = item.textContent;
+                const wouldHaveResults = checkFilterResults('city', city);
+                
+                if (!wouldHaveResults) {
+                    item.classList.add('zeroResults');
+                } else {
+                    item.classList.remove('zeroResults');
+                }
+            }
+        });
+    }
+
+    function updateMonthAvailability() {
+        const monthItems = monthContainer.querySelectorAll('.selectorItem');
+        monthItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                const month = item.textContent;
+                const wouldHaveResults = checkFilterResults('month', month);
+                
+                if (!wouldHaveResults) {
+                    item.classList.add('zeroResults');
+                } else {
+                    item.classList.remove('zeroResults');
+                }
+            }
+        });
+    }
+
+    // Check if selecting this filter would result in any matches
+    function checkFilterResults(filterType, filterValue) {
+        let hasResults = false;
+        
+        allBoxes.forEach(box => {
+            // Get values for this box
+            const category = box.querySelector('.event_category').textContent;
+            const locationText = box.querySelector('.event_location').textContent;
+            const city = locationText.split(',')[0].trim();
+            const monthText = box.querySelector('.event_month').textContent;
+            const month = monthText.replace('Usually in ', '').trim();
+            const keywordElements = box.querySelectorAll('.event_keywords keyword');
+            const keywords = Array.from(keywordElements).map(el => el.textContent);
+            
+            // Check if currently displayed based on current filters
+            const currentCategoryMatch = selectedCategories.size === 0 || selectedCategories.has(category);
+            const currentKeywordMatch = selectedKeywords.size === 0 || keywords.some(keyword => selectedKeywords.has(keyword));
+            const currentCityMatch = selectedCities.size === 0 || selectedCities.has(city);
+            const currentMonthMatch = selectedMonths.size === 0 || selectedMonths.has(month);
+            
+            // Skip if the box is not currently visible based on other filters
+            if (!currentCategoryMatch || !currentKeywordMatch || !currentCityMatch || !currentMonthMatch) {
+                return;
+            }
+            
+            // Check if this box would be visible if we added the new filter
+            let newFilterMatch = false;
+            
+            switch (filterType) {
+                case 'category':
+                    newFilterMatch = category === filterValue;
+                    break;
+                case 'keyword':
+                    newFilterMatch = keywords.includes(filterValue);
+                    break;
+                case 'city':
+                    newFilterMatch = city === filterValue;
+                    break;
+                case 'month':
+                    newFilterMatch = month === filterValue;
+                    break;
+            }
+            
+            if (newFilterMatch) {
+                hasResults = true;
+            }
+        });
+        
+        return hasResults;
     }
 });
