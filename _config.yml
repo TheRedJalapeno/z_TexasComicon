@@ -1,0 +1,97 @@
+title: Texas Comicon
+tagline: The verified guide to Texas comic, anime & gaming conventions
+description: >-
+  Dates, venues, and official links for every major comic con, anime convention,
+  horror weekend, and gaming expo in Texas — checked against official sources.
+url: https://texascomicon.com
+baseurl: ""
+lang: en_US
+theme: null
+timezone: America/Chicago
+author: ZingLab
+logo: /img/favicon.png
+image: /img/index.jpg
+social:
+  name: Texas Comicon
+
+# ----- Monetization ---------------------------------------------------------
+# AdSense: Auto ads run site-wide from `client`. Manual units render only when
+# a slot ID is filled in below (create units in AdSense > Ads > By ad unit).
+ads:
+  enabled: true
+  client: ca-pub-5058258078034240
+  slots:
+    leaderboard: ""   # wide banner under page headers
+    in_feed: ""       # between cards in lists
+    in_article: ""    # inside convention pages and posts
+    sidebar: ""       # sticky sidebar unit on wide screens
+  # Shown in a slot when no AdSense slot ID is configured.
+  house_ad:
+    headline: Put your brand in front of Texas fans
+    body: Featured listings, sponsored posts, and display placements.
+    cta: See sponsorship options
+    url: /advertise/
+
+analytics:
+  ga4: G-60BG16T00G
+
+# Appended to every outbound link to a convention or partner.
+utm:
+  source: texascomicon
+  medium: referral
+
+mailchimp:
+  action: https://robertwillnow.us7.list-manage.com/subscribe/post?u=76621cda98d188f78b8c23516&amp;id=7777e06599&amp;f_id=00cae9e4f0
+  honeypot: b_76621cda98d188f78b8c23516_7777e06599
+  listing_tag: "7522986"
+
+# ----- Content --------------------------------------------------------------
+categories_meta:
+  comic: { label: Comic & Pop Culture, short: Comic Con }
+  anime: { label: Anime & Japanese Pop Culture, short: Anime }
+  horror: { label: Horror, short: Horror }
+  gaming: { label: Gaming & Retro, short: Gaming }
+
+collections:
+  conventions:
+    output: true
+    permalink: /conventions/:name/
+  regions:
+    output: true
+    permalink: /texas/:name/
+
+permalink: /blog/:year/:title/
+paginate: 9
+paginate_path: /blog/page:num/
+
+defaults:
+  - scope: { path: "", type: conventions }
+    values: { layout: convention }
+  - scope: { path: "", type: regions }
+    values: { layout: region }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: default }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-paginate
+
+feed:
+  path: feed.xml
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

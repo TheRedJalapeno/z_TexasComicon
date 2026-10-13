@@ -1,0 +1,5 @@
+{%- case include.status -%}
+{%- when 'confirmed' -%}<span class="pill pill-ok" title="Published on the official website">Confirmed</span>
+{%- when 'listed' -%}<span class="pill pill-warn" title="Listed by ticketing or calendar sites; not yet on the official website">Unconfirmed</span>
+{%- else -%}<span class="pill pill-muted">Dates TBA</span>
+{%- endcase -%}

@@ -1,0 +1,8 @@
+{%- comment -%}
+  Tagged outbound link.
+  {% include link.html url=... label="Website" content="website" campaign=page.slug sponsored=page.sponsored class="btn" %}
+{%- endcomment -%}
+{%- assign sep = '?' -%}{%- if include.url contains '?' -%}{%- assign sep = '&' -%}{%- endif -%}
+{%- assign campaign = include.campaign | default: 'listing' -%}
+{%- capture href -%}{{ include.url }}{{ sep }}utm_source={{ site.utm.source }}&utm_medium={{ site.utm.medium }}&utm_campaign={{ campaign | url_encode }}&utm_content={{ include.content | default: 'link' | url_encode }}{%- endcapture -%}
+<a href="{{ href }}" target="_blank" rel="noopener{% if include.sponsored %} sponsored{% endif %}"{% if include.class %} class="{{ include.class }}"{% endif %} data-track="outbound" data-track-label="{{ campaign }}:{{ include.content }}">{{ include.label }}</a>

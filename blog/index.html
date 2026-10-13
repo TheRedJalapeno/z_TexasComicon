@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+description: Texas convention guides, calendars, and tips for comic con, anime, and gaming fans.
+---
+<div class="wrap page-head">
+  <h1>Blog</h1>
+  <p class="lede">Guides, calendars, and first-timer tips for Texas convention-goers.</p>
+</div>
+<div class="wrap">
+  <div class="grid">
+    {% for post in paginator.posts %}{% include post-card.html post=post %}{% if forloop.index == 3 %}{% include ad.html slot="in_feed" %}{% endif %}{% endfor %}
+  </div>
+  {% if paginator.total_pages > 1 %}
+  <nav class="pager" aria-label="Pagination">
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>{% endif %}
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>{% endif %}
+  </nav>
+  {% endif %}
+</div>

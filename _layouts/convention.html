@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{%- assign c = page -%}
+{%- assign cat = site.categories_meta[c.category] -%}
+{%- assign region = site.regions | where: 'slug', c.region | first -%}
+{%- capture q -%}{{ c.venue }}, {{ c.city }}, TX{%- endcapture -%}
+<article class="con">
+  <header class="con-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/conventions/' | relative_url }}">Conventions</a> <span>/</span> {% if region %}<a href="{{ region.url | relative_url }}">{{ region.title }}</a> <span>/</span>{% endif %} <span aria-current="page">{{ c.title }}</span></nav>
+      <p class="card-meta"><span class="tag tag-{{ c.category }}">{{ cat.label }}</span>{% if c.sponsored %}<span class="tag tag-sponsored">Sponsored listing</span>{% endif %}</p>
+      <h1>{{ c.title }}</h1>
+      <p class="lede">{{ c.description }}</p>
+      <div class="con-facts">
+        <div class="fact">
+          <span class="fact-k">{% if c.upcoming.start %}Next edition{% else %}Next edition{% endif %}</span>
+          <span class="fact-v">{% if c.upcoming.start %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}Not yet announced{% endif %}</span>
+          <span class="fact-s">{% include status.html status=c.upcoming.status %}</span>
+        </div>
+        <div class="fact">
+          <span class="fact-k">Where</span>
+          <span class="fact-v">{{ c.venue }}</span>
+          <span class="fact-s">{% if c.address %}{{ c.address }}, {% endif %}{{ c.city }}, TX {{ c.zip }}</span>
+        </div>
+        <div class="fact">
+          <span class="fact-k">Usually held</span>
+          <span class="fact-v">{{ c.typical }}</span>
+          <span class="fact-s">{% if c.held.start %}Last: {% include daterange.html start=c.held.start end=c.held.end %}{% endif %}</span>
+        </div>
+      </div>
+      <p class="con-actions">
+        {% include link.html url=c.website label="Official website" content="website" campaign=c.slug sponsored=c.sponsored class="btn btn-primary" %}
+        {% if c.tickets %}{% include link.html url=c.tickets label="Tickets" content="tickets" campaign=c.slug sponsored=c.sponsored class="btn" %}{% endif %}
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query={{ q | url_encode }}" target="_blank" rel="noopener" data-track="outbound" data-track-label="{{ c.slug }}:map">Map</a>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap con-layout">
+    <div class="con-main">
+      {% include ad.html slot="leaderboard" %}
+      <div class="prose">
+        {{ content }}
+      </div>
+      {% unless c.sponsored %}{% include ad.html slot="in_article" %}{% endunless %}
+      {% if c.tags %}
+      <h2 class="section-h">Good for</h2>
+      <ul class="chips">{% for t in c.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <aside class="con-side">
+      <div class="panel">
+        <h2 class="panel-h">Official links</h2>
+        <ul class="links">
+          <li>{% include link.html url=c.website label="Website" content="website" campaign=c.slug sponsored=c.sponsored %}</li>
+          {% for s in c.socials %}{% if s[1] %}
+          {%- assign s_url = s[1] -%}{%- assign s_key = s[0] -%}
+          {%- capture lbl -%}{% case s[0] %}{% when 'x' %}X (Twitter){% when 'tiktok' %}TikTok{% when 'youtube' %}YouTube{% when 'bluesky' %}Bluesky{% else %}{{ s[0] | capitalize }}{% endcase %}{%- endcapture -%}
+          <li>{% include link.html url=s_url label=lbl content=s_key campaign=c.slug sponsored=c.sponsored %}</li>
+          {% endif %}{% endfor %}
+        </ul>
+        <p class="fine">Verified {{ c.verified | date: '%b %-d, %Y' }}. Spot something out of date? <a href="{{ '/advertise/#listing' | relative_url }}">Tell us</a>.</p>
+      </div>
+      <div class="panel panel-claim">
+        <h2 class="panel-h">Run this event?</h2>
+        <p>Claim the listing to add tickets, guests, and a featured placement.</p>
+        <a class="btn btn-small" href="{{ '/advertise/#listing' | relative_url }}" data-track="lead" data-track-label="claim:{{ c.slug }}">Claim listing</a>
+      </div>
+      {% include ad.html slot="sidebar" %}
+    </aside>
+  </div>
+
+  {%- assign related = site.conventions | where: 'region', c.region | where_exp: 'x', 'x.slug != c.slug' -%}
+  {%- if related.size < 3 -%}{%- assign related = site.conventions | where: 'category', c.category | where_exp: 'x', 'x.slug != c.slug' -%}{%- endif -%}
+  {% if related.size > 0 %}
+  <section class="wrap related">
+    <h2 class="section-h">{% if related[0].region == c.region %}More in {{ region.title }}{% else %}More {{ cat.short | downcase }} conventions{% endif %}</h2>
+    <div class="grid">
+      {% for r in related limit: 3 %}{% include con-card.html con=r compact=true %}{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+{% include event-jsonld.html %}

@@ -1,0 +1,30 @@
+{%- assign c = page -%}
+{%- if c.upcoming.start -%}
+{%- capture ev_name -%}{{ c.title }} {{ c.upcoming.start | date: '%Y' }}{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ ev_name | jsonify }},
+  "description": {{ c.description | jsonify }},
+  "startDate": "{{ c.upcoming.start | date: '%Y-%m-%d' }}",
+  "endDate": "{{ c.upcoming.end | default: c.upcoming.start | date: '%Y-%m-%d' }}",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": {{ c.venue | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      {% if c.address %}"streetAddress": {{ c.address | jsonify }},{% endif %}
+      "addressLocality": {{ c.city | jsonify }},
+      "addressRegion": "TX",
+      {% if c.zip %}"postalCode": "{{ c.zip }}",{% endif %}
+      "addressCountry": "US"
+    }
+  },
+  "image": ["{{ c.image | default: site.image | absolute_url }}"],
+  "url": {{ c.website | jsonify }}
+}
+</script>
+{%- endif -%}

@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="brand brand-footer"><span>Texas<b>Comicon</b></span></p>
+      <p class="muted">{{ site.tagline }}. Dates are checked against official sources. Always confirm with the organizer before you buy travel.</p>
+    </div>
+    <div>
+      <h2 class="footer-h">By region</h2>
+      <ul class="footer-list">
+        {% assign regions = site.regions | sort: 'order' %}
+        {% for r in regions %}<li><a href="{{ r.url | relative_url }}">{{ r.title }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">By type</h2>
+      <ul class="footer-list">
+        {% for c in site.categories_meta %}<li><a href="{{ '/conventions/' | relative_url }}?type={{ c[0] }}">{{ c[1].label }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Work with us</h2>
+      <ul class="footer-list">
+        <li><a href="{{ '/advertise/' | relative_url }}">Advertise &amp; sponsor</a></li>
+        <li><a href="{{ '/advertise/#listing' | relative_url }}">Add or correct a listing</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Not affiliated with any convention listed. Some pages contain sponsored content or affiliate links, which are always labeled.</p>
+  </div>
+</footer>

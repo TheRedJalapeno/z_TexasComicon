@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if page.collection == 'conventions' -%}
+{%- capture seo_title -%}{{ page.title }}{% if page.upcoming.start %} {{ page.upcoming.start | date: '%Y' }}{% endif %}: Dates, Venue &amp; Official Links | {{ site.title }}{%- endcapture -%}
+{%- elsif page.collection == 'regions' -%}
+{%- capture seo_title -%}{{ page.heading }} | {{ site.title }}{%- endcapture -%}
+{%- elsif page.url == '/' -%}
+{%- capture seo_title -%}{{ site.title }}: {{ page.title }}{%- endcapture -%}
+{%- else -%}
+{%- capture seo_title -%}{{ page.title }} | {{ site.title }}{%- endcapture -%}
+{%- endif -%}
+<title>{{ seo_title }}</title>
+{% seo title=false %}
+<meta name="theme-color" content="#0f1b2d">
+<link rel="icon" href="{{ '/img/favicon.png' | relative_url }}" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% feed_meta %}
+{% if site.analytics.ga4 %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4 }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.ga4 }}');
+</script>
+{% endif %}
+{% if site.ads.enabled and page.ads != false %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.ads.client }}" crossorigin="anonymous"></script>
+{% endif %}

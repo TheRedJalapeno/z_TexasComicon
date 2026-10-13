@@ -1,0 +1,22 @@
+{%- comment -%}
+  Ad slot. Usage: {% include ad.html slot="in_feed" %}
+  Renders an AdSense unit when a slot ID is configured, otherwise a house ad.
+{%- endcomment -%}
+{%- if site.ads.enabled and page.ads != false -%}
+{%- assign slot_id = site.ads.slots[include.slot] -%}
+<aside class="ad ad-{{ include.slot }}" aria-label="Advertisement">
+  <span class="ad-label">Advertisement</span>
+  {%- if slot_id != "" and slot_id -%}
+  <ins class="adsbygoogle" style="display:block" data-ad-client="{{ site.ads.client }}" data-ad-slot="{{ slot_id }}"
+    {% if include.slot == 'in_article' %}data-ad-layout="in-article" data-ad-format="fluid"{% else %}data-ad-format="auto" data-full-width-responsive="true"{% endif %}></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  {%- else -%}
+  {%- assign h = site.ads.house_ad -%}
+  <a class="house-ad" href="{{ h.url | relative_url }}" data-track="house_ad" data-track-label="{{ include.slot }}">
+    <strong>{{ h.headline }}</strong>
+    <span>{{ h.body }}</span>
+    <span class="house-cta">{{ h.cta }} &rarr;</span>
+  </a>
+  {%- endif -%}
+</aside>
+{%- endif -%}

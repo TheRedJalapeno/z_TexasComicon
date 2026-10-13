@@ -1,0 +1,38 @@
+---
+layout: default
+title: All Texas Conventions
+description: Filter every major Texas comic con, anime convention, horror weekend, and gaming expo by type, region, and month, with verified dates and official links.
+---
+{%- assign cons = site.conventions | sort: 'month' -%}
+<div class="wrap page-head">
+  <h1>Texas conventions</h1>
+  <p class="lede">{{ site.conventions.size }} established shows, each checked against its official site. Filter by type, region, or month.</p>
+</div>
+<div class="wrap">
+  <form class="filters" data-filters aria-label="Filter conventions">
+    <fieldset>
+      <legend>Type</legend>
+      <label class="chip-toggle"><input type="radio" name="type" value="" checked> All</label>
+      {% for t in site.categories_meta %}<label class="chip-toggle"><input type="radio" name="type" value="{{ t[0] }}"> {{ t[1].short }}</label>{% endfor %}
+    </fieldset>
+    <fieldset>
+      <legend>Region</legend>
+      <label class="chip-toggle"><input type="radio" name="region" value="" checked> All Texas</label>
+      {% assign regions = site.regions | sort: 'order' %}
+      {% for r in regions %}<label class="chip-toggle"><input type="radio" name="region" value="{{ r.slug }}"> {{ r.title }}</label>{% endfor %}
+    </fieldset>
+    <fieldset>
+      <legend>Month</legend>
+      <select name="month" aria-label="Month">
+        <option value="">Any month</option>
+        {% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+        {% for m in months %}<option value="{{ forloop.index }}">{{ m }}</option>{% endfor %}
+      </select>
+    </fieldset>
+    <p class="filter-count" aria-live="polite"><span data-count>{{ site.conventions.size }}</span> conventions</p>
+  </form>
+  <div class="grid" data-results>
+    {% for c in cons %}{% include con-card.html con=c %}{% if forloop.index == 6 %}{% include ad.html slot="in_feed" %}{% endif %}{% endfor %}
+  </div>
+  <p class="empty" data-empty hidden>No conventions match those filters. <button type="button" class="linklike" data-reset>Clear filters</button></p>
+</div>

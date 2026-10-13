@@ -1,0 +1,8 @@
+{%- assign s = include.start -%}{%- assign e = include.end | default: include.start -%}
+{%- assign sy = s | date: '%Y' -%}{%- assign ey = e | date: '%Y' -%}
+{%- assign sm = s | date: '%b' -%}{%- assign em = e | date: '%b' -%}
+{%- assign sd = s | date: '%-d' -%}{%- assign ed = e | date: '%-d' -%}
+{%- if s == e -%}{{ sm }} {{ sd }}, {{ sy }}
+{%- elsif sy != ey -%}{{ sm }} {{ sd }}, {{ sy }} – {{ em }} {{ ed }}, {{ ey }}
+{%- elsif sm != em -%}{{ sm }} {{ sd }} – {{ em }} {{ ed }}, {{ sy }}
+{%- else -%}{{ sm }} {{ sd }}–{{ ed }}, {{ sy }}{%- endif -%}

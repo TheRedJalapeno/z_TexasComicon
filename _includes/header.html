@@ -1,0 +1,16 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Texas Comicon home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 9.2H29l-7.7 5.9 2.9 9.4L16 20.8l-8.2 5.7 2.9-9.4L3 11.2h9.4z" fill="currentColor"/></svg>
+      <span>Texas<b>Comicon</b></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      {% assign path = page.url %}
+      <a href="{{ '/conventions/' | relative_url }}" {% if path contains '/conventions/' %}aria-current="page"{% endif %}>Conventions</a>
+      <a href="{{ '/calendar/' | relative_url }}" {% if path == '/calendar/' %}aria-current="page"{% endif %}>Calendar</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if path contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
+      <a class="nav-cta" href="{{ '/advertise/' | relative_url }}">Advertise</a>
+    </nav>
+  </div>
+</header>

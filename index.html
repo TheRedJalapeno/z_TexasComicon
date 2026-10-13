@@ -1,0 +1,76 @@
+---
+layout: default
+title: Texas Comic Cons, Anime & Gaming Conventions 2026–2027
+description: The verified guide to Texas comic cons, anime conventions, horror weekends, and gaming expos, with confirmed dates, venues, and official links for every major show.
+body_class: home
+---
+{%- assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
+{%- assign featured = site.conventions | where: 'featured', true -%}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">{{ site.conventions.size }} conventions · verified {{ site.time | date: '%B %Y' }}</p>
+    <h1>Every major Texas comic con, anime convention, and gaming expo, <span class="hl">with dates you can trust.</span></h1>
+    <p class="lede">We check every date and link against the organizer's own site and tell you when a date is only rumored. No dead links, no zombie conventions.</p>
+    <p class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/conventions/' | relative_url }}">Browse conventions</a>
+      <a class="btn" href="{{ '/calendar/' | relative_url }}">See the calendar</a>
+    </p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-top">
+    <h2 class="section-h">Coming up next</h2>
+    <a class="more" href="{{ '/calendar/' | relative_url }}">Full calendar &rarr;</a>
+  </div>
+  <div class="grid" data-upcoming data-limit="6">
+    {% for c in featured %}{% include con-card.html con=c %}{% endfor %}
+    {% for c in dated %}{% unless c.featured %}{% include con-card.html con=c %}{% endunless %}{% endfor %}
+  </div>
+</section>
+
+{% include ad.html slot="leaderboard" %}
+
+<section class="wrap section">
+  <h2 class="section-h">Find a con near you</h2>
+  <div class="regions">
+    {% assign regions = site.regions | sort: 'order' %}
+    {% for r in regions %}
+    {% assign n = site.conventions | where: 'region', r.slug %}
+    <a class="region" href="{{ r.url | relative_url }}"><strong>{{ r.title }}</strong><span>{{ n.size }} conventions</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="section-h">Browse by type</h2>
+  <div class="types">
+    {% for t in site.categories_meta %}
+    {% assign n = site.conventions | where: 'category', t[0] %}
+    <a class="type type-{{ t[0] }}" href="{{ '/conventions/' | relative_url }}?type={{ t[0] }}"><strong>{{ t[1].label }}</strong><span>{{ n.size }} shows</span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-top">
+    <h2 class="section-h">From the blog</h2>
+    <a class="more" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+  </div>
+  <div class="grid">
+    {% for post in site.posts limit: 3 %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+
+<section class="wrap section seo-copy prose">
+  <h2>Your guide to Texas fan conventions</h2>
+  <p>Texas hosts more fan conventions than almost any other state: more than a hundred a year, from 500-person library cons to 60,000-fan weekends. This guide focuses on the established shows worth planning a trip around, across four kinds of events:</p>
+  <ul>
+    <li><strong>Comic &amp; pop culture cons</strong>, such as <a href="{{ '/conventions/fan-expo-dallas/' | relative_url }}">FAN EXPO Dallas</a>, <a href="{{ '/conventions/comicpalooza/' | relative_url }}">Comicpalooza</a>, and <a href="{{ '/conventions/big-texas-comicon/' | relative_url }}">Big Texas Comicon</a>: celebrity guests, comics creators, artist alleys, and cosplay.</li>
+    <li><strong>Anime conventions</strong>, such as <a href="{{ '/conventions/san-japan/' | relative_url }}">San Japan</a>, <a href="{{ '/conventions/anime-frontier/' | relative_url }}">Anime Frontier</a>, <a href="{{ '/conventions/anime-matsuri/' | relative_url }}">Anime Matsuri</a>, and <a href="{{ '/conventions/ikkicon/' | relative_url }}">Ikkicon</a>: industry panels, voice actors, J-fashion, concerts, and late-night programming.</li>
+    <li><strong>Horror</strong>, led by <a href="{{ '/conventions/texas-frightmare-weekend/' | relative_url }}">Texas Frightmare Weekend</a>, one of the country's best-known horror conventions.</li>
+    <li><strong>Gaming &amp; retro</strong>, including <a href="{{ '/conventions/quakecon/' | relative_url }}">QuakeCon</a>'s bring-your-own-computer LAN, <a href="{{ '/conventions/classic-game-fest/' | relative_url }}">Classic Game Fest</a>, and <a href="{{ '/conventions/retro-expo/' | relative_url }}">Retro Expo</a>.</li>
+  </ul>
+  <h3>How we verify dates</h3>
+  <p>Every listing shows one of three labels. <strong>Confirmed</strong> means the dates are published on the organizer's official website. <strong>Unconfirmed</strong> means ticketing or calendar sites list dates the organizer hasn't posted yet. <strong>Dates TBA</strong> means the next edition hasn't been announced, so we show when the last one ran. Each page carries the date we last checked it.</p>
+</section>

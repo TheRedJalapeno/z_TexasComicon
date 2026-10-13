@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- assign cons = site.conventions | where: 'region', page.slug | sort: 'month' -%}
+<div class="wrap page-head">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/conventions/' | relative_url }}">Conventions</a></nav>
+  <h1>{{ page.heading | default: page.title }}</h1>
+  <p class="lede">{{ page.description }}</p>
+</div>
+<div class="wrap">
+  <div class="grid">
+    {% for c in cons %}{% include con-card.html con=c %}{% if forloop.index == 3 %}{% include ad.html slot="in_feed" %}{% endif %}{% endfor %}
+  </div>
+  <div class="prose region-copy">
+    {{ content }}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="wrap page-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/blog/' | relative_url }}">Blog</a></nav>
+    {% if page.sponsored %}<p class="disclosure"><strong>Sponsored</strong> · This post was paid for by {{ page.sponsor | default: 'a partner' }}. Our listings and dates are never for sale.</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.updated %} · Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: '%B %-d, %Y' }}</time>{% endif %}</p>
+  </header>
+  <div class="wrap con-layout">
+    <div class="con-main">
+      <div class="prose">
+        {{ content }}
+      </div>
+      {% include ad.html slot="in_article" %}
+    </div>
+    <aside class="con-side">
+      <div class="panel">
+        <h2 class="panel-h">Coming up next</h2>
+        {%- assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
+        <ul class="mini-list" data-upcoming>
+          {% for c in dated %}<li data-end="{{ c.upcoming.end | date: '%Y-%m-%d' }}"><a href="{{ c.url | relative_url }}">{{ c.title }}</a><span>{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}</span></li>{% endfor %}
+        </ul>
+      </div>
+      {% include ad.html slot="sidebar" %}
+    </aside>
+  </div>
+</article>
