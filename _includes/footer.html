@@ -1,3 +1,4 @@
+{%- include site-mailtos.html -%}
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
@@ -21,7 +22,9 @@
       <h2 class="footer-h">Work with us</h2>
       <ul class="footer-list">
         <li><a href="{{ '/advertise/' | relative_url }}">Advertise &amp; sponsor</a></li>
-        <li><a href="{{ '/advertise/#listing' | relative_url }}">Add or correct a listing</a></li>
+        <li><a href="{{ claim_any_href }}" data-track="lead" data-track-label="claim_footer">Claim a convention page</a></li>
+        <li><a href="{{ add_href }}" data-track="lead" data-track-label="add_footer">Add a missing convention</a></li>
+        <li><a href="{{ fix_any_href }}" data-track="lead" data-track-label="fix_footer">Report a correction</a></li>
         <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
       </ul>
     </div>

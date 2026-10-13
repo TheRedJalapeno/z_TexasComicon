@@ -23,7 +23,14 @@ socials:
   youtube: "https://www.youtube.com/@texasfrightmareweekendofficial"
 tags: ["horror", "celebrity guests", "screenings", "panels", "vendors"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Site blocks automated checks. Look up contact page by hand."
 verified: 2026-10-12
 ---
 

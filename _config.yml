@@ -14,6 +14,16 @@ image: /img/index.jpg
 social:
   name: Texas Comicon
 
+# ----- Contact ---------------------------------------------------------------
+# Claim, sponsor, and correction buttons are mailto links to this address.
+contact:
+  email: texas@zinglab.com
+  name: Texas Comicon
+
+# Sign-off used in outreach pitch emails (/outreach/).
+outreach:
+  signature: "Texas Comicon\nhttps://texascomicon.com"
+
 # ----- Monetization ---------------------------------------------------------
 # AdSense: Auto ads run site-wide from `client`. Manual units render only when
 # a slot ID is filled in below (create units in AdSense > Ads > By ad unit).
@@ -30,7 +40,7 @@ ads:
     headline: Put your brand in front of Texas fans
     body: Featured listings, sponsored posts, and display placements.
     cta: See sponsorship options
-    url: /advertise/
+    url: /advertise/#placements
 
 analytics:
   ga4: G-60BG16T00G
@@ -39,11 +49,6 @@ analytics:
 utm:
   source: texascomicon
   medium: referral
-
-mailchimp:
-  action: https://robertwillnow.us7.list-manage.com/subscribe/post?u=76621cda98d188f78b8c23516&amp;id=7777e06599&amp;f_id=00cae9e4f0
-  honeypot: b_76621cda98d188f78b8c23516_7777e06599
-  listing_tag: "7522986"
 
 # ----- Content --------------------------------------------------------------
 categories_meta:

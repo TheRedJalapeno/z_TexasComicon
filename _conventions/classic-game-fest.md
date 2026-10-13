@@ -22,7 +22,14 @@ socials:
   youtube: "https://www.youtube.com/classicgamefest"
 tags: ["retro gaming", "free play", "tournaments", "vendors", "live music"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "No public email found. Message via Facebook."
 verified: 2026-10-12
 ---
 

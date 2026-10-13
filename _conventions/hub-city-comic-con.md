@@ -17,7 +17,14 @@ held:
 website: "https://hubcitycomiccon.com/"
 tags: ["voice actors", "cosplay contest", "itasha cars", "vendors"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Produced by ConLive. Contact forms at con-live.com/contact."
 verified: 2026-10-12
 ---
 

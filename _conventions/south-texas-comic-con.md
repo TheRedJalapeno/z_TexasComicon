@@ -23,7 +23,14 @@ socials:
   tiktok: "https://www.tiktok.com/@stxcomiccon"
 tags: ["voice actors", "cosplay", "comics", "family-friendly"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "No public email found. DM on Facebook/Instagram."
 verified: 2026-10-12
 ---
 

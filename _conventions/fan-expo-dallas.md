@@ -26,7 +26,15 @@ socials:
   youtube: "https://www.youtube.com/channel/UCEOrTO8A5Nq9oQ1NbvLUxrg"
 tags: ["celebrity guests", "comics", "cosplay", "photo ops", "family-friendly"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "tickets@fanexpohq.com"
+  verify: true
+  note: "Ticket-support inbox (Informa). Ask to be routed to FAN EXPO Dallas marketing/partnerships."
 verified: 2026-10-12
 ---
 

@@ -26,7 +26,14 @@ socials:
   youtube: "https://www.youtube.com/channel/UCtObN1VRdVbpaz76PYOsRMA"
 tags: ["celebrity guests", "comics", "cosplay", "panels", "pop culture"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "No public email found. Use socials or the site's contact options."
 verified: 2026-10-12
 ---
 

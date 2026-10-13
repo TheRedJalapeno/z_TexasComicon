@@ -1,23 +1,25 @@
-{%- assign c = include.con -%}
-{%- assign cat = site.categories_meta[c.category] -%}
-<article class="card{% if c.sponsored %} is-sponsored{% endif %}"
-  data-type="{{ c.category }}" data-region="{{ c.region }}" data-month="{{ c.month }}"
-  {% if c.upcoming.end %}data-end="{{ c.upcoming.end | date: '%Y-%m-%d' }}"{% endif %}>
+{%- assign cc = include.con -%}
+{%- assign cc_cat = site.categories_meta[cc.category] -%}
+{%- include is-ended.html con=cc -%}
+{%- if ended -%}{%- assign show_dates = false -%}{%- elsif cc.upcoming.start -%}{%- assign show_dates = true -%}{%- else -%}{%- assign show_dates = false -%}{%- endif -%}
+<article class="card{% if cc.sponsored %} is-sponsored{% endif %}{% if show_dates %} is-live{% endif %}"
+  data-type="{{ cc.category }}" data-region="{{ cc.region }}" data-month="{{ cc.month }}"
+  {% if show_dates %}data-end="{{ cc.upcoming.end | date: '%Y-%m-%d' }}"{% endif %}>
   <div class="card-date" aria-hidden="true">
-    {%- if c.upcoming.start -%}
-    <span class="cd-m">{{ c.upcoming.start | date: '%b' }}</span><span class="cd-d">{{ c.upcoming.start | date: '%-d' }}</span><span class="cd-y">{{ c.upcoming.start | date: '%Y' }}</span>
-    {%- else -%}
-    <span class="cd-m">{{ c.typical | slice: 0, 3 }}</span><span class="cd-d">TBA</span>
+    {%- if show_dates -%}
+    <span class="when-live"><span class="cd-m">{{ cc.upcoming.start | date: '%b' }}</span><span class="cd-d">{{ cc.upcoming.start | date: '%-d' }}</span><span class="cd-y">{{ cc.upcoming.start | date: '%Y' }}</span></span>
     {%- endif -%}
+    <span class="when-tba"><span class="cd-m">{{ cc.typical | slice: 0, 3 }}</span><span class="cd-d">TBA</span></span>
   </div>
   <div class="card-body">
-    <p class="card-meta"><span class="tag tag-{{ c.category }}">{{ cat.short }}</span>{% if c.sponsored %}<span class="tag tag-sponsored">Sponsored</span>{% endif %}</p>
-    <h3 class="card-title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h3>
-    <p class="card-where">{{ c.city }}, TX · {{ c.venue }}</p>
+    <p class="card-meta"><span class="tag tag-{{ cc.category }}">{{ cc_cat.short }}</span>{% if cc.claimed %}<span class="tag tag-verified" title="This listing is managed by the organizer">Verified by organizer</span>{% endif %}{% if cc.sponsored %}<span class="tag tag-sponsored">Sponsored</span>{% endif %}</p>
+    <h3 class="card-title"><a href="{{ cc.url | relative_url }}">{{ cc.title }}</a></h3>
+    <p class="card-where">{{ cc.city }}, TX · {{ cc.venue }}</p>
     <p class="card-when">
-      {%- if c.upcoming.start -%}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %} {% include status.html status=c.upcoming.status %}
-      {%- else -%}Usually {{ c.typical }} · last held {% include daterange.html start=c.held.start end=c.held.end %}{%- endif -%}
+      {%- if show_dates -%}<span class="when-live">{% include daterange.html start=cc.upcoming.start end=cc.upcoming.end %} {% include status.html status=cc.upcoming.status %}</span>{%- endif -%}
+      {%- if ended -%}{%- assign lh_s = cc.upcoming.start -%}{%- assign lh_e = cc.upcoming.end -%}{%- else -%}{%- assign lh_s = cc.held.start -%}{%- assign lh_e = cc.held.end -%}{%- endif -%}
+      <span class="when-tba">Usually {{ cc.typical }} · last held {% if show_dates %}{% include daterange.html start=cc.upcoming.start end=cc.upcoming.end %}{% else %}{% include daterange.html start=lh_s end=lh_e %}{% endif %}</span>
     </p>
-    {% unless include.compact %}<p class="card-desc">{{ c.description }}</p>{% endunless %}
+    {% unless include.compact %}<p class="card-desc">{{ cc.description }}</p>{% endunless %}
   </div>
 </article>

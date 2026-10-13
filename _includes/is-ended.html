@@ -1,0 +1,10 @@
+{%- comment -%}
+  Sets `ended` to true when the convention's upcoming edition finished before
+  this build. Browsers re-check against today's date in site.js.
+{%- endcomment -%}
+{%- assign ended = false -%}
+{%- if include.con.upcoming.end -%}
+  {%- assign e_num = include.con.upcoming.end | date: '%Y%m%d' | plus: 0 -%}
+  {%- assign now_num = site.time | date: '%Y%m%d' | plus: 0 -%}
+  {%- if e_num < now_num -%}{%- assign ended = true -%}{%- endif -%}
+{%- endif -%}

@@ -26,7 +26,14 @@ socials:
   discord: "https://discord.gg/8AMcKqpxjN"
 tags: ["anime", "gaming", "cosplay", "nightlife", "resort venue"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Contact form at ikkicon.com/contact; also Discord."
 verified: 2026-10-12
 ---
 

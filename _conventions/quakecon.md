@@ -17,7 +17,14 @@ held:
 website: "https://quakecon.bethesda.net/"
 tags: ["LAN party", "BYOC", "esports", "PC gaming", "free admission"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Bethesda event. Go through Bethesda PR/partnerships."
 verified: 2026-10-12
 ---
 

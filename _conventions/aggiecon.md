@@ -24,7 +24,14 @@ socials:
   discord: "https://discord.gg/Fkcex7RrfK"
 tags: ["student-run", "anime", "tournaments", "artist alley", "cosplay contest"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "aggiecon.publicrelations@gmail.com"
+  note: "Student-run (Texas A&M). PR inbox; director is aggiecondirector@gmail.com."
 verified: 2026-10-12
 ---
 

@@ -1,0 +1,16 @@
+{%- comment -%}
+  Sets two arrays for upcoming lists:
+    live    — conventions with announced dates that haven't ended, by start date
+    waiting — everything else (TBA, or ended without new dates), by typical month
+  Ended editions are excluded from `live` regardless of featured/sponsored.
+{%- endcomment -%}
+{%- assign live = "" | split: "" -%}
+{%- assign waiting = "" | split: "" -%}
+{%- assign lc_sorted = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
+{%- for lc in lc_sorted -%}
+  {%- include is-ended.html con=lc -%}
+  {%- if ended -%}{%- assign waiting = waiting | push: lc -%}{%- else -%}{%- assign live = live | push: lc -%}{%- endif -%}
+{%- endfor -%}
+{%- assign lc_tba = site.conventions | where: 'upcoming.status', 'tba' -%}
+{%- for lc in lc_tba -%}{%- assign waiting = waiting | push: lc -%}{%- endfor -%}
+{%- assign waiting = waiting | sort: 'month' -%}

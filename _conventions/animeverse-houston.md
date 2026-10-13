@@ -23,7 +23,14 @@ socials:
   tiktok: "https://www.tiktok.com/@animeverse.fest"
 tags: ["anime", "cosplay contest", "gaming", "vendors", "live performances"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Run by Zimmad Events. No email on site; DM via Instagram/Facebook."
 verified: 2026-10-12
 ---
 

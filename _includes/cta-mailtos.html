@@ -1,0 +1,44 @@
+{%- comment -%}
+  Captures claim/sponsor mailto hrefs for the current convention into
+  claim_href and sponsor_href. Usage: {% include cta-mailtos.html con=page %}
+{%- endcomment -%}
+{%- assign m = include.con -%}
+{%- capture m_url -%}{{ m.url | absolute_url }}{%- endcapture -%}
+{%- capture m_subj -%}Claim request: {{ m.title }}{%- endcapture -%}
+{%- capture m_body -%}
+Hi Texas Comicon,
+
+I'm with {{ m.title }} and would like to claim our page:
+{{ m_url }}
+
+Name:
+Role:
+Phone (optional):
+
+What we'd like updated (dates, tickets, guests, photos):
+{%- endcapture -%}
+{%- capture claim_href -%}{% include mailto.html subject=m_subj body=m_body %}{%- endcapture -%}
+{%- capture m_subj -%}Sponsorship: {{ m.title }} page{%- endcapture -%}
+{%- capture m_body -%}
+Hi Texas Comicon,
+
+I'm interested in sponsoring the {{ m.title }} page:
+{{ m_url }}
+
+Company / brand:
+Website:
+Contact name:
+Timing and budget (optional):
+{%- endcapture -%}
+{%- capture sponsor_href -%}{% include mailto.html subject=m_subj body=m_body %}{%- endcapture -%}
+{%- capture m_subj -%}Correction: {{ m.title }}{%- endcapture -%}
+{%- capture m_body -%}
+Hi Texas Comicon,
+
+Something on the {{ m.title }} page looks out of date:
+{{ m_url }}
+
+What's wrong:
+Correct info (and a source link if you have one):
+{%- endcapture -%}
+{%- capture fix_href -%}{% include mailto.html subject=m_subj body=m_body %}{%- endcapture -%}

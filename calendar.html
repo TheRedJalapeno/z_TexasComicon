@@ -4,17 +4,17 @@ title: Texas Convention Calendar 2026–2027
 permalink: /calendar/
 description: Month-by-month calendar of Texas comic cons, anime conventions, and gaming expos, with confirmed and unconfirmed dates clearly labeled.
 ---
-{%- assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
-{%- assign tba = site.conventions | where: 'upcoming.status', 'tba' | sort: 'month' -%}
+{%- include live-cons.html -%}
 <div class="wrap page-head">
   <h1>Texas convention calendar</h1>
   <p class="lede">Announced dates in order. Shows that haven't announced their next edition are listed by the month they usually run.</p>
 </div>
 <div class="wrap con-layout">
+  {%- include site-mailtos.html -%}
   <div class="con-main">
     <section data-upcoming>
       {%- assign current = "" -%}
-      {% for c in dated %}
+      {% for c in live %}
         {%- assign ym = c.upcoming.start | date: '%B %Y' -%}
         {% if ym != current %}{% unless forloop.first %}</ol>{% endunless %}<h2 class="month-h" data-month-head>{{ ym }}</h2><ol class="cal">{% assign current = ym %}{% endif %}
         <li class="cal-row" data-end="{{ c.upcoming.end | date: '%Y-%m-%d' }}">
@@ -29,12 +29,13 @@ description: Month-by-month calendar of Texas comic cons, anime conventions, and
     {% include ad.html slot="in_article" %}
     <h2 class="section-h">Dates not yet announced</h2>
     <ol class="cal">
-      {% for c in tba %}
+      {% for c in waiting %}
       <li class="cal-row">
         <span class="cal-date">Usually {{ c.typical }}</span>
         <a class="cal-name" href="{{ c.url | relative_url }}">{{ c.title }}</a>
         <span class="cal-where">{{ c.city }}</span>
-        <span class="pill pill-muted">Last: {% include daterange.html start=c.held.start end=c.held.end %}</span>
+        {%- include is-ended.html con=c -%}
+        <span class="pill pill-muted">Last: {% if ended %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}{% include daterange.html start=c.held.start end=c.held.end %}{% endif %}</span>
       </li>
       {% endfor %}
     </ol>
@@ -43,7 +44,8 @@ description: Month-by-month calendar of Texas comic cons, anime conventions, and
     <div class="panel">
       <h2 class="panel-h">Know a date we don't?</h2>
       <p>Organizers can send updates and claim their listing.</p>
-      <a class="btn btn-small" href="{{ '/advertise/#listing' | relative_url }}">Send an update</a>
+      <a class="btn btn-small" href="{{ fix_any_href }}" data-track="lead" data-track-label="calendar_update">Send an update</a>
+      <p class="fine"><a href="{{ add_href }}" data-track="lead" data-track-label="calendar_add">Add a missing convention</a></p>
     </div>
     {% include ad.html slot="sidebar" %}
   </aside>

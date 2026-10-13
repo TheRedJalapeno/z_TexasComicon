@@ -23,7 +23,14 @@ socials:
   discord: "https://discord.gg/pGg6JhkVX4"
 tags: ["anime", "cosplay", "hotel con", "panels"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "No public email. Site has a Become a Sponsor page; otherwise DM on Instagram or Discord."
 verified: 2026-10-12
 ---
 

@@ -4,19 +4,42 @@ layout: default
 {%- assign c = page -%}
 {%- assign cat = site.categories_meta[c.category] -%}
 {%- assign region = site.regions | where: 'slug', c.region | first -%}
+{%- include is-ended.html con=c -%}
+{%- assign page_ended = ended -%}
+{%- include cta-mailtos.html con=c -%}
 {%- capture q -%}{{ c.venue }}, {{ c.city }}, TX{%- endcapture -%}
 <article class="con">
   <header class="con-hero">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/conventions/' | relative_url }}">Conventions</a> <span>/</span> {% if region %}<a href="{{ region.url | relative_url }}">{{ region.title }}</a> <span>/</span>{% endif %} <span aria-current="page">{{ c.title }}</span></nav>
-      <p class="card-meta"><span class="tag tag-{{ c.category }}">{{ cat.label }}</span>{% if c.sponsored %}<span class="tag tag-sponsored">Sponsored listing</span>{% endif %}</p>
+      <p class="card-meta">
+        <span class="tag tag-{{ c.category }}">{{ cat.label }}</span>
+        {% if c.claimed %}<span class="tag tag-verified" title="This listing is managed by the organizer">Verified by organizer</span>{% endif %}
+        {% if c.sponsored %}<span class="tag tag-sponsored">Sponsored listing</span>{% endif %}
+      </p>
       <h1>{{ c.title }}</h1>
       <p class="lede">{{ c.description }}</p>
+
+      {% if c.upcoming.end %}
+      <p class="ended-note" data-ended-note="{{ c.upcoming.end | date: '%Y-%m-%d' }}" {% unless page_ended %}hidden{% endunless %}>
+        <span>The {{ c.upcoming.start | date: '%Y' }} edition ({% include daterange.html start=c.upcoming.start end=c.upcoming.end %}) has ended. Next dates haven't been announced yet.</span>
+        <a href="{{ '/calendar/' | relative_url }}">See what's coming up &rarr;</a>
+      </p>
+      {% endif %}
+
       <div class="con-facts">
         <div class="fact">
-          <span class="fact-k">{% if c.upcoming.start %}Next edition{% else %}Next edition{% endif %}</span>
-          <span class="fact-v">{% if c.upcoming.start %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}Not yet announced{% endif %}</span>
-          <span class="fact-s">{% include status.html status=c.upcoming.status %}</span>
+          <span class="fact-k">Next edition</span>
+          {% if c.upcoming.start and page_ended == false %}
+          <span data-hide-when-ended>
+            <span class="fact-v">{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}</span>
+            <span class="fact-s">{% include status.html status=c.upcoming.status %}</span>
+          </span>
+          {% endif %}
+          <span {% if c.upcoming.start and page_ended == false %}hidden data-show-when-ended{% endif %}>
+            <span class="fact-v">Not yet announced</span>
+            <span class="fact-s">{% include status.html status='tba' %}</span>
+          </span>
         </div>
         <div class="fact">
           <span class="fact-k">Where</span>
@@ -26,7 +49,7 @@ layout: default
         <div class="fact">
           <span class="fact-k">Usually held</span>
           <span class="fact-v">{{ c.typical }}</span>
-          <span class="fact-s">{% if c.held.start %}Last: {% include daterange.html start=c.held.start end=c.held.end %}{% endif %}</span>
+          <span class="fact-s">Last: {% if page_ended %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}{% include daterange.html start=c.held.start end=c.held.end %}{% endif %}</span>
         </div>
       </div>
       <p class="con-actions">
@@ -60,13 +83,35 @@ layout: default
           <li>{% include link.html url=s_url label=lbl content=s_key campaign=c.slug sponsored=c.sponsored %}</li>
           {% endif %}{% endfor %}
         </ul>
-        <p class="fine">Verified {{ c.verified | date: '%b %-d, %Y' }}. Spot something out of date? <a href="{{ '/advertise/#listing' | relative_url }}">Tell us</a>.</p>
+        <p class="fine">Verified {{ c.verified | date: '%b %-d, %Y' }}{% if c.claimed %} · managed by the organizer{% endif %}. Spot something out of date? <a href="{{ fix_href }}" data-track="lead" data-track-label="correction:{{ c.slug }}">Tell us</a>.</p>
       </div>
+
+      {% if c.claimed %}
+      <div class="panel panel-verified">
+        <h2 class="panel-h">Verified by organizer</h2>
+        <p>{{ c.title }} manages this page, so dates, tickets, and guests come straight from the organizer.</p>
+      </div>
+      {% else %}
       <div class="panel panel-claim">
-        <h2 class="panel-h">Run this event?</h2>
-        <p>Claim the listing to add tickets, guests, and a featured placement.</p>
-        <a class="btn btn-small" href="{{ '/advertise/#listing' | relative_url }}" data-track="lead" data-track-label="claim:{{ c.slug }}">Claim listing</a>
+        <h2 class="panel-h">Is this your convention?</h2>
+        <p>Claim this page and we'll keep your dates, tickets, guests, and photos up to date, plus add a <strong>Verified by organizer</strong> badge. Pricing on request.</p>
+        <a class="btn btn-small btn-primary" href="{{ claim_href }}" data-track="lead" data-track-label="claim:{{ c.slug }}">Claim this page</a>
       </div>
+      {% endif %}
+
+      {% if c.sponsored and c.sponsor.name != "" and c.sponsor.name %}
+      <div class="panel panel-sponsor">
+        <p class="ad-label">Presented by</p>
+        <h2 class="panel-h">{% if c.sponsor.url and c.sponsor.url != "" %}{% include link.html url=c.sponsor.url label=c.sponsor.name content="presenting_sponsor" campaign=c.slug sponsored=true %}{% else %}{{ c.sponsor.name }}{% endif %}</h2>
+      </div>
+      {% elsif c.sponsored != true %}
+      <div class="panel panel-sponsor">
+        <h2 class="panel-h">Sponsor this page</h2>
+        <p>Put your shop, studio, hotel, or brand in front of fans planning a trip to {{ c.title }}.</p>
+        <a class="btn btn-small" href="{{ sponsor_href }}" data-track="lead" data-track-label="sponsor:{{ c.slug }}">Become the presenting sponsor</a>
+        <p class="fine"><a href="{{ '/advertise/#placements' | relative_url }}">What's included</a></p>
+      </div>
+      {% endif %}
       {% include ad.html slot="sidebar" %}
     </aside>
   </div>
@@ -81,5 +126,25 @@ layout: default
     </div>
   </section>
   {% endif %}
+
+  <section class="wrap work-with-us">
+    <p class="fine disclaimer">Texas Comicon is an independent guide and isn't affiliated with {{ c.title }} or its organizers.</p>
+    <div class="cta-pair">
+      {% unless c.claimed %}
+      <div class="cta-box">
+        <h2>Run a Texas convention?</h2>
+        <p>Claim your listing and we'll keep your dates, ticket links, and photos current, with a <strong>Verified by organizer</strong> badge. Pricing on request.</p>
+        <a class="btn btn-primary" href="{{ claim_href }}" data-track="lead" data-track-label="claim_footer:{{ c.slug }}">Claim this page</a>
+      </div>
+      {% endunless %}
+      {% unless c.sponsored %}
+      <div class="cta-box">
+        <h2>Reach Texas fans</h2>
+        <p>Feature your convention, shop, artist booth, hotel, or brand to fans planning their next con weekend.</p>
+        <a class="btn" href="{{ sponsor_href }}" data-track="lead" data-track-label="sponsor_footer:{{ c.slug }}">Sponsor this page</a>
+      </div>
+      {% endunless %}
+    </div>
+  </section>
 </article>
-{% include event-jsonld.html %}
+{% unless page_ended %}{% include event-jsonld.html %}{% endunless %}

@@ -1,0 +1,95 @@
+---
+layout: default
+title: Convention outreach list
+permalink: /outreach/
+robots: noindex, nofollow
+sitemap: false
+ads: false
+body_class: outreach
+---
+{%- include live-cons.html -%}
+{%- assign rows = live | concat: waiting -%}
+{%- assign with_email = site.conventions | where_exp: 'x', 'x.contact.email' -%}
+{%- assign personal = site.conventions | where: 'contact.personal', true -%}
+<div class="wrap page-head">
+  <p class="eyebrow">Internal · not linked or indexed</p>
+  <h1>Convention outreach list</h1>
+  <p class="lede">{{ site.conventions.size }} conventions, {{ with_email.size }} with an email on file. <strong>Personal</strong> means a named person's address: never show it on a public page. <strong>Verify</strong> means the inbox may not reach marketing. Pitch links open a pre-written email from you.</p>
+  <p class="hero-actions">
+    <button class="btn btn-primary" type="button" data-copy-emails>Copy all emails</button>
+    <button class="btn" type="button" data-download-csv>Download CSV</button>
+    <span class="fine" data-copy-status aria-live="polite"></span>
+  </p>
+</div>
+<div class="wrap">
+  <div class="table-scroll">
+  <table class="table outreach-table">
+    <thead>
+      <tr><th>#</th><th>Convention</th><th>Region</th><th>Next dates</th><th>Listing</th><th>Email</th><th>Website</th><th>Our page</th><th>Pitch</th><th>Contact notes</th></tr>
+    </thead>
+    <tbody>
+    {% for c in rows %}
+      {%- include is-ended.html con=c -%}
+      {%- assign region = site.regions | where: 'slug', c.region | first -%}
+      {%- capture page_url -%}{{ c.url | absolute_url }}{%- endcapture -%}
+      {%- capture dates_txt -%}{% if c.upcoming.start and ended == false %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}TBA (usually {{ c.typical }}){% endif %}{%- endcapture -%}
+      {%- capture status_txt -%}{% if c.upcoming.start and ended == false %}{{ c.upcoming.status }}{% else %}tba{% endif %}{%- endcapture -%}
+      {%- capture listing_txt -%}{% if c.claimed %}claimed{% endif %}{% if c.claimed and c.sponsored %} + {% endif %}{% if c.sponsored %}sponsored{% endif %}{% unless c.claimed or c.sponsored %}open{% endunless %}{%- endcapture -%}
+      {%- capture pitch_subj -%}{{ c.title }} on Texas Comicon{%- endcapture -%}
+      {%- capture pitch_body -%}
+Hi {{ c.title }} team,
+
+I run Texas Comicon ({{ site.url | remove: 'https://' }}), an independent guide to Texas comic, anime, and gaming conventions. {{ c.title }} has a page here:
+{{ page_url }}
+
+We check your dates and links against your official site{% if c.upcoming.start and ended == false %} and currently list {{ dates_txt }}{% endif %}. Every link to you is UTM-tagged (utm_source=texascomicon), so you can see the traffic we send in your own analytics.
+
+Two ways to work together:
+- Claim the page: we keep your dates, tickets, guests, and photos current and add a "Verified by organizer" badge.
+- Sponsor or feature it: pin {{ c.title }} to our home page until the event, or bring in a presenting sponsor for the page.
+
+If anything on the page is wrong, just reply and I'll fix it.
+
+{{ site.outreach.signature }}
+      {%- endcapture -%}
+      <tr data-name="{{ c.title | escape }}" data-city="{{ c.city }}" data-region="{{ region.title }}" data-dates="{{ dates_txt | strip }}" data-status="{{ status_txt }}" data-listing="{{ listing_txt }}" data-email="{{ c.contact.email }}" data-flag="{% if c.contact.personal %}personal{% elsif c.contact.verify %}verify{% endif %}" data-website="{{ c.website }}" data-page="{{ page_url }}" data-note="{{ c.contact.note | escape }}">
+        <td>{{ forloop.index }}</td>
+        <td><strong>{{ c.title }}</strong><br><span class="muted">{{ site.categories_meta[c.category].short }} · {{ c.city }}</span></td>
+        <td>{{ region.title }}</td>
+        <td>{{ dates_txt }}<br>{% include status.html status=status_txt %}</td>
+        <td>{% if c.claimed %}<span class="tag tag-verified">Claimed</span> {% endif %}{% if c.sponsored %}<span class="tag tag-sponsored">Sponsored</span>{% endif %}{% unless c.claimed or c.sponsored %}<span class="muted">Open</span>{% endunless %}</td>
+        <td>{% if c.contact.email %}<a href="mailto:{{ c.contact.email }}">{{ c.contact.email }}</a>{% if c.contact.personal %} <span class="pill pill-warn">personal</span>{% endif %}{% if c.contact.verify %} <span class="pill pill-warn">verify</span>{% endif %}{% else %}<span class="muted">None</span>{% endif %}</td>
+        <td><a href="{{ c.website }}" target="_blank" rel="noopener">Website</a></td>
+        <td><a href="{{ c.url | relative_url }}">View page</a></td>
+        <td>{% if c.contact.email %}<a class="btn btn-small" href="{% include mailto.html to=c.contact.email subject=pitch_subj body=pitch_body %}">Email pitch</a>{% else %}<span class="muted">No email</span>{% endif %}</td>
+        <td class="note">{{ c.contact.note }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="fine">Personal addresses: {{ personal.size }}. Update contacts in each convention's <code>contact:</code> front matter.</p>
+</div>
+<script>
+(function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.outreach-table tbody tr'));
+  var status = document.querySelector('[data-copy-status]');
+  document.querySelector('[data-copy-emails]').addEventListener('click', function () {
+    var emails = rows.map(function (r) { return r.dataset.email; }).filter(Boolean);
+    var text = emails.join(', ');
+    var done = function () { status.textContent = 'Copied ' + emails.length + ' emails.'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () { window.prompt('Copy these emails:', text); });
+    else window.prompt('Copy these emails:', text);
+  });
+  document.querySelector('[data-download-csv]').addEventListener('click', function () {
+    var cols = ['name', 'city', 'region', 'dates', 'status', 'listing', 'email', 'flag', 'website', 'page', 'note'];
+    var esc = function (v) { v = String(v == null ? '' : v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+    var lines = [cols.join(',')].concat(rows.map(function (r) { return cols.map(function (k) { return esc(r.dataset[k]); }).join(','); }));
+    var blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'texascomicon-outreach.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>

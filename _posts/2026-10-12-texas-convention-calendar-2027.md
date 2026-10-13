@@ -8,11 +8,11 @@ Planning your 2027 convention year? Below is every Texas show in our directory w
 
 **Confirmed** means the organizer has published the dates on its official site. **Unconfirmed** means ticketing or calendar sites list dates the organizer hasn't posted yet, so don't book nonrefundable travel on those.
 
-{% assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' %}
+{% include live-cons.html %}
 <table class="table">
   <thead><tr><th>Dates</th><th>Convention</th><th>City</th><th>Status</th></tr></thead>
   <tbody>
-  {% for c in dated %}
+  {% for c in live %}
     <tr><td>{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}</td><td><a href="{{ c.url | relative_url }}">{{ c.title }}</a></td><td>{{ c.city }}</td><td>{% include status.html status=c.upcoming.status %}</td></tr>
   {% endfor %}
   </tbody>
@@ -22,8 +22,7 @@ Planning your 2027 convention year? Below is every Texas show in our directory w
 
 These established shows haven't announced their next edition yet. Here's when they usually run:
 
-{% assign tba = site.conventions | where: 'upcoming.status', 'tba' | sort: 'month' %}
-{% for c in tba %}- **[{{ c.title }}]({{ c.url | relative_url }})** ({{ c.city }}), usually {{ c.typical }}. Last held {% include daterange.html start=c.held.start end=c.held.end %}.
+{% for c in waiting %}{% include is-ended.html con=c %}- **[{{ c.title }}]({{ c.url | relative_url }})** ({{ c.city }}), usually {{ c.typical }}. Last held {% if ended %}{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}{% else %}{% include daterange.html start=c.held.start end=c.held.end %}{% endif %}.
 {% endfor %}
 
 ## Date changes to note

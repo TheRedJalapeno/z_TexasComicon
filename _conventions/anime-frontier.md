@@ -19,7 +19,14 @@ held:
 website: "https://animefrontier.com/"
 tags: ["anime", "industry guests", "premieres", "cosplay", "exhibit hall"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@animefrontier.com"
+  note: "Produced by LeftField Media. Sponsorship inbox: sales@leftfieldmedia.com."
 verified: 2026-10-12
 ---
 

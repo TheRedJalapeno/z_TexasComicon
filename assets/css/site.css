@@ -207,7 +207,6 @@ p { margin: 0 0 1em; }
 .card-when { font-size: .88rem; color: var(--ink-2); margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .card-desc { font-size: .92rem; color: var(--ink-2); margin: 0; }
 .post-card .card-title { font-size: 1.2rem; }
-.card.is-past { display: none; }
 
 .tag {
   display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
@@ -303,7 +302,6 @@ p { margin: 0 0 1em; }
 .mini-list a { font-weight: 600; text-decoration: none; color: var(--ink); }
 .mini-list a:hover { color: var(--brand); }
 .mini-list span { color: var(--ink-3); font-size: .84rem; }
-.mini-list li.is-past, .mini-list li:nth-child(n+7) { display: none; }
 
 /* ----- Prose ----- */
 .prose { max-width: 72ch; }
@@ -364,17 +362,6 @@ main > .ad-leaderboard { max-width: var(--wrap); padding: 0 16px; }
 .offer h3 { margin-top: 0; color: var(--brand); }
 .offer p { margin: 0; font-size: .94rem; color: var(--ink-2); }
 
-.listing-form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; max-width: 560px; }
-.field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; flex: 1; min-width: 0; }
-.field-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.field-row .field { min-width: 180px; }
-.field label { font-size: .86rem; font-weight: 600; }
-.field input {
-  font: inherit; padding: 10px 12px; border-radius: var(--radius-sm);
-  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
-}
-.field input:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
-.hp { position: absolute; left: -5000px; }
 
 .pager { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; color: var(--ink-3); }
 
@@ -393,3 +380,44 @@ main > .ad-leaderboard { max-width: var(--wrap); padding: 0 16px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
 }
+
+/* ----- Ended / claimed states ----- */
+[data-upcoming] .is-past { display: none !important; }
+/* Cards carry both date variants; .is-live shows the upcoming dates.
+   site.js drops .is-live once an edition's end date passes. */
+.card .when-live, .card.is-live .when-tba { display: none; }
+.card.is-live .when-live { display: contents; }
+.card-when .when-tba, .card.is-live .card-when .when-live { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.card.is-live .card-when .when-tba { display: none; }
+.card-date .when-tba { display: contents; }
+.tag-verified { --c: var(--ok); background: var(--ok-bg); }
+.ended-note {
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  background: var(--warn-bg); color: var(--warn); border-radius: var(--radius-sm);
+  padding: 10px 14px; font-size: .92rem; margin: 0 0 18px;
+}
+.ended-note a { color: inherit; font-weight: 600; }
+.panel-verified { background: var(--ok-bg); border-color: color-mix(in srgb, var(--ok) 30%, var(--line)); }
+.panel-sponsor .fine { margin-top: 10px; }
+.panel-sponsor .panel-h a { color: var(--ink); }
+.work-with-us { padding-top: 40px; }
+.disclaimer { margin-bottom: 16px; }
+.cta-pair { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.cta-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.cta-box:first-child { background: var(--brand-soft); border-color: color-mix(in srgb, var(--brand) 30%, var(--line)); }
+.cta-box h2 { font-size: 1.25rem; }
+.cta-box p { color: var(--ink-2); }
+.contact-actions { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); margin: 1em 0; }
+.contact-action { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); text-decoration: none; color: var(--ink); }
+.contact-action strong { font-family: var(--font-display); color: var(--brand); }
+.contact-action span { font-size: .9rem; color: var(--ink-2); }
+.contact-action:hover { border-color: var(--brand); }
+
+/* ----- Outreach (internal) ----- */
+.outreach .wrap { max-width: 1440px; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.outreach-table { display: table; margin: 0; font-size: .86rem; }
+.outreach-table th, .outreach-table td { padding: 10px 12px; }
+.outreach-table td:first-child { white-space: normal; color: var(--ink-3); }
+.outreach-table td.note { min-width: 220px; color: var(--ink-2); }
+.outreach-table tbody tr:hover { background: var(--surface-2); }

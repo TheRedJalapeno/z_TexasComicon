@@ -23,7 +23,14 @@ socials:
   x: "https://x.com/bellcomiccon"
 tags: ["family-friendly", "comics", "gaming", "cosplay contest", "celebrity guests"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@bellcountycomiccon.com"
+  note: "Phone (254) 800-9088 also listed."
 verified: 2026-10-12
 ---
 

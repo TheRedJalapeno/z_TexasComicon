@@ -4,8 +4,7 @@ title: Texas Comic Cons, Anime & Gaming Conventions 2026–2027
 description: The verified guide to Texas comic cons, anime conventions, horror weekends, and gaming expos, with confirmed dates, venues, and official links for every major show.
 body_class: home
 ---
-{%- assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
-{%- assign featured = site.conventions | where: 'featured', true -%}
+{%- include live-cons.html -%}
 <section class="hero">
   <div class="wrap hero-inner">
     <p class="eyebrow">{{ site.conventions.size }} conventions · verified {{ site.time | date: '%B %Y' }}</p>
@@ -24,8 +23,9 @@ body_class: home
     <a class="more" href="{{ '/calendar/' | relative_url }}">Full calendar &rarr;</a>
   </div>
   <div class="grid" data-upcoming data-limit="6">
-    {% for c in featured %}{% include con-card.html con=c %}{% endfor %}
-    {% for c in dated %}{% unless c.featured %}{% include con-card.html con=c %}{% endunless %}{% endfor %}
+    {%- comment -%}Featured listings lead, but only while their edition is upcoming.{%- endcomment -%}
+    {% for c in live %}{% if c.featured %}{% include con-card.html con=c %}{% endif %}{% endfor %}
+    {% for c in live %}{% unless c.featured %}{% include con-card.html con=c %}{% endunless %}{% endfor %}
   </div>
 </section>
 

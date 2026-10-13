@@ -1,0 +1,47 @@
+{%- comment -%}
+  Site-wide mailto hrefs: claim_any_href, sponsor_any_href, add_href, fix_any_href, buy_href.
+{%- endcomment -%}
+{%- capture sm_body -%}
+Hi Texas Comicon,
+
+I'd like to claim our convention's page.
+
+Convention:
+Page link (if listed):
+Name:
+Role:
+Phone (optional):
+{%- endcapture -%}
+{%- capture claim_any_href -%}{% include mailto.html subject="Claim a convention page" body=sm_body %}{%- endcapture -%}
+{%- capture sm_body -%}
+Hi Texas Comicon,
+
+I'm interested in sponsoring or advertising on Texas Comicon.
+
+Company / brand:
+Website:
+What we're interested in (featured listing, sponsored post, display, calendar):
+Timing and budget (optional):
+{%- endcapture -%}
+{%- capture sponsor_any_href -%}{% include mailto.html subject="Sponsorship inquiry" body=sm_body %}{%- endcapture -%}
+{%- capture sm_body -%}
+Hi Texas Comicon,
+
+Please add this convention:
+
+Name:
+City:
+Dates:
+Official website:
+I'm the organizer (yes/no):
+{%- endcapture -%}
+{%- capture add_href -%}{% include mailto.html subject="Add a missing convention" body=sm_body %}{%- endcapture -%}
+{%- capture sm_body -%}
+Hi Texas Comicon,
+
+Page with the error:
+What's wrong:
+Correct info (and a source link if you have one):
+{%- endcapture -%}
+{%- capture fix_any_href -%}{% include mailto.html subject="Report a correction" body=sm_body %}{%- endcapture -%}
+{%- capture buy_href -%}{% include mailto.html subject="Buying TexasComicon.com" %}{%- endcapture -%}

@@ -23,7 +23,14 @@ socials:
   youtube: "https://www.youtube.com/@bigtexcon"
 tags: ["celebrity guests", "comics", "costume contest", "photo ops"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@bigtexascomicon.com"
+  note: "General inbox listed on official site."
 verified: 2026-10-12
 ---
 

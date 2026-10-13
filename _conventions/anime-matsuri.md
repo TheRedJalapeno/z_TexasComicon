@@ -21,7 +21,14 @@ socials:
   x: "https://x.com/AnimeMatsuri"
 tags: ["anime", "J-fashion", "cosplay contest", "concerts", "workshops"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@animematsuri.com"
+  note: "General inbox listed on official site."
 verified: 2026-10-12
 ---
 

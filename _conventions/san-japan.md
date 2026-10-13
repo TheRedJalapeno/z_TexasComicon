@@ -26,7 +26,14 @@ socials:
   discord: "https://discord.gg/A8TbsemqtB"
 tags: ["anime", "gaming", "fan-run", "cosplay", "artist alley"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "Site directs all inquiries to its contact form."
 verified: 2026-10-12
 ---
 

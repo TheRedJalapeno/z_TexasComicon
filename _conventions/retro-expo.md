@@ -22,7 +22,14 @@ socials:
   instagram: "https://www.instagram.com/retroexpoevent"
 tags: ["retro gaming", "toys", "comics", "collectibles", "free parking"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "heritageeventco@gmail.com"
+  note: "Organizer: Heritage Event Co."
 verified: 2026-10-12
 ---
 

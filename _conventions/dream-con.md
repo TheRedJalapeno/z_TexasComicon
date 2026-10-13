@@ -26,7 +26,14 @@ socials:
   twitch: "https://twitch.tv/dreamconvention"
 tags: ["anime", "gaming", "creators", "music", "inclusive"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@dreamconvention.com"
+  note: "Media/partnerships: press@dreamconvention.com."
 verified: 2026-10-12
 ---
 

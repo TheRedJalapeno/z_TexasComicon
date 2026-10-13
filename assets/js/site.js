@@ -8,12 +8,24 @@
     String(today.getMonth() + 1).padStart(2, '0') + '-' +
     String(today.getDate()).padStart(2, '0');
 
-  document.querySelectorAll('[data-upcoming]').forEach(function (list) {
-    var items = list.querySelectorAll('[data-end]');
-    items.forEach(function (el) {
-      if (el.getAttribute('data-end') < todayStr) el.classList.add('is-past');
-    });
+  // Any card or row whose edition has ended stops showing its dates, and is
+  // dropped from upcoming lists, sponsored or not.
+  document.querySelectorAll('[data-end]').forEach(function (el) {
+    if (el.getAttribute('data-end') >= todayStr) return;
+    el.classList.remove('is-live');
+    el.classList.add('is-past');
+  });
 
+  // Convention pages: show the "this edition has ended" note.
+  document.querySelectorAll('[data-ended-note]').forEach(function (el) {
+    if (el.getAttribute('data-ended-note') < todayStr) {
+      el.hidden = false;
+      document.querySelectorAll('[data-hide-when-ended]').forEach(function (x) { x.hidden = true; });
+      document.querySelectorAll('[data-show-when-ended]').forEach(function (x) { x.hidden = false; });
+    }
+  });
+
+  document.querySelectorAll('[data-upcoming]').forEach(function (list) {
     var limit = parseInt(list.getAttribute('data-limit'), 10);
     if (limit) {
       var shown = 0;

@@ -11,6 +11,7 @@
 {%- endif -%}
 <title>{{ seo_title }}</title>
 {% seo title=false %}
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
 <meta name="theme-color" content="#0f1b2d">
 <link rel="icon" href="{{ '/img/favicon.png' | relative_url }}" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">

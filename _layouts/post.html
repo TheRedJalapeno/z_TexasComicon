@@ -19,9 +19,9 @@ layout: default
     <aside class="con-side">
       <div class="panel">
         <h2 class="panel-h">Coming up next</h2>
-        {%- assign dated = site.conventions | where_exp: 'x', 'x.upcoming.start' | sort: 'upcoming.start' -%}
-        <ul class="mini-list" data-upcoming>
-          {% for c in dated %}<li data-end="{{ c.upcoming.end | date: '%Y-%m-%d' }}"><a href="{{ c.url | relative_url }}">{{ c.title }}</a><span>{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}</span></li>{% endfor %}
+        {%- include live-cons.html -%}
+        <ul class="mini-list" data-upcoming data-limit="6">
+          {% for c in live %}<li data-end="{{ c.upcoming.end | date: '%Y-%m-%d' }}"><a href="{{ c.url | relative_url }}">{{ c.title }}</a><span>{% include daterange.html start=c.upcoming.start end=c.upcoming.end %}</span></li>{% endfor %}
         </ul>
       </div>
       {% include ad.html slot="sidebar" %}

@@ -24,7 +24,15 @@ socials:
   youtube: "https://www.youtube.com/ziacomics"
 tags: ["comics", "cosplay", "celebrity guests", "community"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "troy@fatmanevents.com"
+  personal: true
+  note: "Named organizer address (Fatman Events). Never show publicly."
 verified: 2026-10-12
 ---
 

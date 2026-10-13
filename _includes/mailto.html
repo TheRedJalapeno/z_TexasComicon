@@ -1,0 +1,8 @@
+{%- comment -%}
+  Outputs a mailto: href (no quotes). Spaces become %20, not "+", so mail clients render them properly.
+  {% include mailto.html to=site.contact.email subject=subj body=body %}
+{%- endcomment -%}
+{%- assign mt_to = include.to | default: site.contact.email -%}
+{%- assign mt_subject = include.subject | url_encode | replace: '+', '%20' -%}
+{%- assign mt_body = include.body | strip | url_encode | replace: '+', '%20' -%}
+mailto:{{ mt_to }}?subject={{ mt_subject }}{% if include.body %}&amp;body={{ mt_body }}{% endif %}

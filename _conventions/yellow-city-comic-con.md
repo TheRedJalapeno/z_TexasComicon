@@ -25,7 +25,14 @@ socials:
   bluesky: "https://bsky.app/profile/yellowcitycon.bsky.social"
 tags: ["community-run", "cosplay", "artists & authors", "gaming", "celebrity guests"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: "info@yellowcitycon.com"
+  note: "Volunteer-run. General inbox."
 verified: 2026-10-12
 ---
 

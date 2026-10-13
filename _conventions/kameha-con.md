@@ -17,7 +17,14 @@ held:
 website: "https://kamehacon.com/"
 tags: ["Dragon Ball", "fan convention", "tournaments", "after-hours"]
 featured: false
+claimed: false
 sponsored: false
+sponsor:
+  name: ""
+  url: ""
+contact:
+  email: null
+  note: "No contact info on site. Try socials."
 verified: 2026-10-12
 ---
 
