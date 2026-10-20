@@ -421,3 +421,8 @@ main > .ad-leaderboard { max-width: var(--wrap); padding: 0 16px; }
 .outreach-table td:first-child { white-space: normal; color: var(--ink-3); }
 .outreach-table td.note { min-width: 220px; color: var(--ink-2); }
 .outreach-table tbody tr:hover { background: var(--surface-2); }
+.gate-form { max-width: 420px; margin-top: 16px; }
+.gate-form label { display: block; font-size: .86rem; font-weight: 600; margin-bottom: 6px; }
+.gate-row { display: flex; gap: 8px; }
+.gate-row input { flex: 1; min-width: 0; font: inherit; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.gate-row input:focus { border-color: var(--brand); outline: none; }

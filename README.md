@@ -71,7 +71,7 @@ When an edition ends, move `upcoming` into `held`, then set `upcoming.status: tb
 
 ## Outreach and contact
 
-- **`/outreach/`** is an internal list of every convention, with its contact email, a pre-written pitch mailto, "Copy all emails", and a CSV download. It isn't linked anywhere, is excluded from the sitemap, and has `noindex`. It's still a public URL, though, and the repo is public, so keep personal addresses (`personal: true`) to a minimum.
+- **`/outreach/`** is a password gate. It hashes the password you type (SHA-256) and redirects to `/outreach/<hash>/`, the page built from `outreach-list.html`, so the password never appears in page source and crawlers have nothing to follow. To change the password, set that file's `permalink` to the new password's hash, which `printf 'newpass' | shasum -a 256` prints. The list itself is an internal list of every convention, with its contact email, a pre-written pitch mailto, "Copy all emails", and a CSV download. It isn't linked anywhere, is excluded from the sitemap, and has `noindex`. It's still a public URL, though, and the repo is public, so keep personal addresses (`personal: true`) to a minimum.
 - **Claim, sponsor, add, and correction buttons** are mailto links to `contact.email` in `_config.yml`, with pre-filled subjects and bodies. The pitch email's sign-off is `outreach.signature`.
 
 ## Monetization
