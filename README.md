@@ -2,7 +2,7 @@
 
 The verified guide to Texas comic, anime, horror, and gaming conventions: [texascomicon.com](https://texascomicon.com).
 
-A Jekyll site built by GitHub Pages. There is no build pipeline: push to `main` and Pages rebuilds.
+A Jekyll site built by GitHub Pages. There is no build pipeline: push to `main` and Pages rebuilds. 
 
 ## Local development
 
